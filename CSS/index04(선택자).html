@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 선택자 -->
+    <style>
+        /* 아래의 차이 다 확인해보기 */
+
+        /* .abox p{color:red}  
+        .abox > p{color: red;}
+        .abox > ul p{color: blue;}
+        .abox > ul > li > p{color: green;} */  
+    </style>
+</head>
+<body>
+
+    <div class="abox"> <!--abox 클래스-->
+        <p>하위선택자</p> <!--abox의 1단계 자식-->
+        <p>하위선택자</p>
+
+        <ul>
+            <li><p>하위선택자</p></li>  <!--abox의 li 가 2단계 p가 3단계 자식이다-->
+            <li><p>하위선택자</p></li>
+        </ul>
+    </div>
+
+    <p>여기는 abox 밑인가 아닌가</p>
+
+    <hr>
+    <!-- style은 중간에 쓰지않기 -->
+    <style>
+        /* .bbox input[속성=값] {}  */
+        .bbox input[type=password] {color: red;}
+        .bbox input[name="aaa"]{color: aqua;}
+        /* [] 앞은 선택자이다(ex. li 선택자) */
+        li[class*="item"]{color: palevioletred;}
+    </style>
+
+
+
+    <div class="bbox">
+        아이디:<input type="text" name="aaa"><br>
+        이름:<input type="text" name="bbb"><br>
+        비밀번호:<input type="password" name="ccc"><br>
+    </div>
+    
+    <div> <!--자식들 클래스 네임이 다른데 item을 공통으로 갖는다 -->
+        <ul><li class="item-1">아이템</li></ul>
+        <ul><li class="item-2">아이템</li></ul>
+        <ul><li class="item-3">아이템</li></ul>
+        <ul><li class="item-4">아이템</li></ul>
+        <ul><li class="item-5">아이템</li></ul>
+    </div>
+
+    <hr>
+
+    <!-- 가상선택자 -->
+    <style>
+        .cbox .a:active{background-color: blueviolet;}
+        .cbox .b:hover{background-color: black;}
+        .cbox input:focus{border: 1px solid red; outline: none;}
+        /* :after , :before 같은 가상선택자도  */
+    </style>
+
+    <div class="cbox">
+        <div class="a">액티브</div> <!--div는 블럭이라서 한줄을 다 차지한다. 즉 인라인-->
+        
+        <div class="b">호버</div> <!--마우스 닿았을때-->
+        
+        포커스:<input type="text" name="aaa"> <!--focus는 쓸수잇는곳이 있다-->
+    </div>
+</body>
+</html>
