@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 
+        박스 관련 속성
+        width, height는 블록에만 줄 수 있다 (인라인에는 줄 수 없다)
+         */
+        
+        .abox div{ /* abox 클래스 안에 div 태그 */
+            display: inline; /* 배치구도를 인라인으로 */
+            /* width 관련 속성은 inline에 사용 못함 */
+        }
+        .bbox span, .bbox strong, .bbox b{
+            display: block; /* 배치구도를 블럭으로 */
+            /* height: 100px; block 이므로 height 설정 가능*/
+
+        }
+        .cbox{  /* .cbox div 라고 안치도록 조심 */
+            display: none; /* 배치구도를 안보이게 했다가 클릭과 같은 조건에 따라 보이게 함 */
+        }
+        .dbox a{
+            display: inline-block; /* 무엇이 바뀌는지 중요 */
+            /* inline-block 은 배치는 inline으로 하지만 block 속성을 갖게한다
+            따라서 inline 배치이지만 block의 속성인 height, width를 설정 가능하다 */
+            width: 100px;
+            height: 100px;
+
+            border: 1px solid #777;
+            text-align: center; /*  가로적으로 가운데*/
+            line-height: 100px;  /* height 와 동일하게 맞춰서 높이를 가운데로 이동 */
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="abox"> <!-- div*5 탭 -->
+        <div>블럭</div>
+        <div>블럭</div>
+        <div>블럭</div>
+        <div>블럭</div>
+        <div>블럭</div>
+    </div>
+
+    <div class="bbox"> <!-- bbox는 div 이므로 블럭 -->
+        <span>인라인</span>
+        <strong>인라인</strong>
+        <b>인라인</b>
+    </div>
+
+    <div class="cbox">
+        디스플레이 논
+    </div>
+
+    <div class="dbox">
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+        <a href="#">인라인</a>
+    </div>
+
+</body>
+</html>

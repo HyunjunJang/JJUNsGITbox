@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        #wrap{
+            height: 500px;
+            border: 1px solid #777;
+            background-image: url("img/back.jpg");
+            background-repeat: no-repeat;
+            /* background-size: 100%; */
+            background-size: contain; /* 무조건 이미지가 잘리지 않도록 하고, 나머지는 비워진다 */
+            background-size: cover; /* 빈공간없이 꽉채우고, 이미지를 자른다 */
+        }
+        #wrap-mid{
+            height: 500px;
+            border: 1px solid #777;
+            background-image: url("img/back.jpg");
+            
+            background-size: cover; /* 빈공간없이 꽉채우고 이미지를 자른다 */
+            background-attachment: fixed; /* 스크롤에 상관없이 백그라운드가 뒤에 고정 */
+        }
+    </style>
+<body>
+    <section id="wrap">
+        ..........
+    </section>
+
+    <section id="wrap-mid">
+    </section>
+
+    <section style="height: 1000px; border: 1px solid #777;">
+    </section>
+</body>
+</html>

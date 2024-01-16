@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .abox {
+            /* 박스정렬에도 적용된다. (무슨말인지 이해안됨) */
+            text-align: center; /*css는 기본값이 존재, left*/
+            text-decoration: underline;
+        }
+        a{
+            text-decoration: none; /* 밑줄지울때 사용한다 */
+            color: black;
+        }
+
+        /* 문단세로정렬 -- 중요: 기준이 되는 태그에 적용해야한다*/
+        /* 
+        .bbox{
+        vertical-align: bottom; 디폴트값
+        vertical-align: middle; 적용이 안됨
+
+        } 아래와의 차이를 볼것*/
+        .bbox img{
+            vertical-align: middle;
+        }
+
+        /* 중요꿀팁 */
+        /* 문단을 세로에서 정가운데로 보내야하는데 기준이 될 태그가 없는 경우?*/
+        /* height 와 line-height 값을 같게한다(단,1줄일때만 가능)*/
+        .cbox{
+            height: 200px;
+            width : 200px;
+            line-height: 200px; /*있느냐 없느냐 비교해보기*/
+            text-align: center;
+            /* border 속성 외우기 */
+            border: 1px solid #777; /*테두리설정 - 첫번째 는 굵기, 두번째는 선의 종류, 세번째가 선의 색상*/
+        }
+    </style>
+
+</head>
+<body>
+    <p class="abox">
+        글자,텍스트관련속성
+    </p>
+    <a href="#">글자</a>
+
+    <p class="bbox">
+        안녕하세요?
+        <img src="img/css3.png" alt="이미지">
+    </p>
+
+    <p class="cbox">
+        꿀팁:문단가운데 정렬
+    </p>
+</body>
+</html>

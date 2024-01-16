@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{padding: 0; margin: 0;}
+    ul, li, dl, dd, ol{list-style: none;} /*list-style 찾아보기 */
+
+        .gnb2 {
+            text-align: center;
+            background-color: #000;
+            text-align: right;
+        }
+        .gnb2 > li{
+            display: inline-block;
+        }
+        .gnb2 > li > a{
+            display: block;
+            width: 70px;
+            height: 70px;
+            line-height: 70px; /* 가운데 */
+            text-decoration: none; /* 밑줄 */
+            text-align: center;
+            color: #fff;
+        }
+        .gnb2 > li > a:hover{ /* hover 꼭 다시 보기 */
+            background-color: #333;
+        }
+       
+        .nav {
+            text-align: center;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <header> <!-- BOX 영역을 생각하면서 만들것 -->
+        <nav class="nav">
+            <ul class="gnb">
+                <img src="img/css3.png" alt="logo">
+            </ul>
+        </nav>
+        <nav class="nav2">
+            <ul class="gnb2">
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </nav>
+</body>
+</html>
