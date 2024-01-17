@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* float에서 가장 중요한건 박스로 감싸도록 법칙이 필요하다 */
+        /* 생각하지말고 외울것!! 왜냐면 부모가 float을 감싸지 못해서 꼭 필요하다 */
+        /* 방법1. */
+        .abox{width: 500px; margin: 0 auto; /* border: 1px solid #777 */;
+                        overflow: hidden;}
+        /* 방법2. */    
+        /* .abox:after{content: "";display: block; clear: both;} */
+
+        .abox .item{
+            border: 1px solid #777; 
+            float: left;
+            width: 25%;
+            box-sizing: border-box; /* 박스사이징 복습 */
+        }
+        
+        .bbox{
+            border: 1px solid #777;
+            margin: 0 auto;
+            width: 500px;
+            overflow: hidden; /* float을 쓸거라면 일단 법칙처럼 쓴다 */
+        }
+
+        .bbox .left{float: left;}
+        .bbox .right{float: right;}
+        .bbox .left2{float: left;}
+    </style>
+</head>
+<body>
+    
+    <div class="abox">
+        <div class="item">상자</div>
+        <div class="item">상자</div>
+        <div class="item">상자</div>
+        <div class="item">상자</div>
+    </div>
+
+    <div class="bbox">
+        <div class="left">왼쪽</div>
+        <div class="right">오른쪽</div>
+        <div class="left2">왼쪽</div>
+
+        <div style="clear: both;"> 더 이상 플로의 영향을 받지 않도록 한다</div>
+        <!-- clear: both 있고 없고 주의 -->
+    </div>
+
+    <hr>
+    <!-- 메뉴를 float으로 정확히 5등분 -->
+    <style>
+        ul, li {list-style: none;}
+        .cbox{
+            
+            border: 1px solid #777;
+            margin: 0 auto;
+            width: 500px;
+            overflow: hidden;
+            padding: 0px;
+        }
+
+        .cbox li{
+            float: left;
+            width: 20%;
+            border: 1px solid #777;
+            box-sizing: border-box;
+            text-align: center;
+            
+        }
+        .cbox li a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    <ul class="cbox">
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+        <li><a href="#">메뉴</a></li>
+    </ul>
+</body>
+</html>

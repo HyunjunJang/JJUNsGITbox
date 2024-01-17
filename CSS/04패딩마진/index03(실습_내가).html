@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    1.일단 박스 3개
+    2.윗 박스는 ul 이랑 li 이용 + display block +hover 설정
+    3.가운데 박스는 img 가져오고 가운데 정렬
+    4.마지막 박스는
+     (1)박스 2개로 나눈다
+     (2)만든다
+  -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .abox{
+            height: 50px;
+            background-color: black;
+        }
+
+        .abox .aabox{
+            display: block;
+            text-align: center;
+        }
+        .abox .aabox li{
+            display: inline;
+            text-align: center;
+        }
+        
+        .abox .aabox li a{
+            
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            color: white;
+            text-decoration: none;
+        }
+        .abox .aabox li a:hover{
+            background-color: #777;
+        }
+
+        .abody img{
+            width: 100%;
+            
+        }
+        .cbox{
+            padding: 40px 60px ;
+        }
+        .cbox .ebox{
+            border: 1px solid black;
+            min-height: 150px;
+        }
+        .dbox{
+            display:inline;
+            margin: 0px;
+            background-color: gray;
+            
+        }
+    </style>
+</head>
+<body class="abody">
+    <div>
+        <div class="abox">
+            <ul class="aabox">
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bbox">
+        <img src="img/d46c9376-a912-4539-b471-a6f215f973dd_1080x380.jpg" alt="middleimg">
+    </div>
+
+    <div class="cbox">
+        <p class="dbox">
+            오늘의발견
+        </p>
+
+        <div class="ebox">
+            본문내용...<br>
+            본문내용...<br>
+            본문내용...<br>
+            본문내용...<br>
+            본문내용...<br>
+            본문내용...<br>
+            본문내용...<br>
+            본문내용...<br>
+            본문내용...<br>
+            본문내용...<br>
+            본문내용...<br>
+        </div>
+
+    </div>
+</body>
+</html>

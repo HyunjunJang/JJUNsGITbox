@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        p{
+            border: 1px solid #777;
+            /* min-width: 300px; */
+            /* height: 300px; 고정값을 주면 튀어나간다*/
+            /* min-height: 300px; */
+            /* min-height: 300px; 를 하면 300px 이하로는 줄지 않고 길어지면 가변된다 */
+
+            max-width: 300px;
+            max-height: 300px;
+            /* 300px 이상으로는 커지지 않는다. 300px 이하에서는 맞춰서 가변된다. min과 반대; */
+        }
+
+        .box-content{
+            border: 1px solid #777;
+            width: 300px;
+            padding: 0px 20px;
+
+            /* box-sizing: content-box; 박스 사이징에 대한 디폴트값 */
+            box-sizing: border-box;
+            /* 매우 중요!! 패딩과 윤곽을 너비에 포함시킨다 (즉, 박스 너비 계산에서 뺀다) 따라서 원하는 width에 맞출수있다*/
+        }
+    </style>
+</head>
+<body>
+    <p>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        <!-- 집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br>
+        집에가고싶다<br> -->
+    </p>
+
+    <div class="box-content" >
+        박스너비 = 너비 + 패딩 + 윤곽<br>
+        -> 즉, 상자크기가 변한다
+    </div>
+</body>
+</html>
