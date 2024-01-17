@@ -7,11 +7,11 @@
 
     <style>
 
-        b{color: red;} 
+        .b{color: red;} 
         /* 여러개를 선택할 때는 b,c,d 로 나열 */
             
-        .a{color: green;}
-        #a{color: purple;}
+        .a{color: green;} /* .a 는 a클래스 태그를 지칭  */
+        #a{color: purple;} /* #a 는 a아이디 태그를 지칭 */
         
         /* a클래스, a아이디, b클래스 모두 */
         /* ,와 띄어쓰기 중요하다 */
@@ -19,9 +19,10 @@
     </style>
 </head>
 <body>
-    <!-- id, class 의 차이 -->
+    <!-- id, class 의 차이 id 는 중복이 불가능하다-->
     <section class="a"> 클래스 지칭</section>
     <p class="a">클래스 여러개</p>
-    <h1 class="a">클래스 여러개</h1>
+    <h1 class="b">b클래스 여러개</h1>
+    <h2 id="a">이건 아이디</h2>
 </body>
 </html>

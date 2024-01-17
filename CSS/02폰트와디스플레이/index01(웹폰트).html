@@ -6,14 +6,14 @@
     <title>Document</title>
 
     
-    <!-- 
+    <!-- 링크로 외부스타일 선언을 통한 웹폰트 적용
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet"> 
     -->
     
     <style>
-        
+        /* import를 통한 내부스타일 선언으로 웹폰트 적용 */
         @import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
 
         
@@ -24,8 +24,9 @@
             font-size: 50px;
             font-weight: bolder;
             font-style: italic;
-            letter-spacing: 30px; /*글자간격, 음수도 줘보자*/
-            /* letter-spacing: -10px; 글자간격, 음수도 줘보자 */
+            letter-spacing: 30px; 
+            /* 글자간격, 음수도 줘보자 */
+            /* letter-spacing: -10px;  */
         }
     </style>
 
@@ -33,8 +34,9 @@
 <body>
     <p>헬로월드</p>
     <h3>웹폰트</h3>
+    <span>헬로월드 span</span>
 
-    <section>
+    <section style="color: blue;">
         <div>
             <form>
                 <h4>웹폰트?</h4>

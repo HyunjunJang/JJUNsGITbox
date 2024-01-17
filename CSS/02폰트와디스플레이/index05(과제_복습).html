@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    1.이미지를 위한 박스와 메뉴를 위한 박스 둘로 나눈다
+    2.이미지가 있는 박스는 block으로 만들고 이미지를 불러오고 가운데 넣기
+    3.밑은 block 큰 박스를 만들고 <a>태그 메뉴 박스 5개를 박스안에 넣는다
+    4.그 박스들을 오른쪽으로 밀어 붙인다
+    5.각 a박스에서 가운데 정렬하고 hover 액션선택자를 붙인다.
+    -->
+
+    <style>
+        .top{background-color: black;text-align: center;}
+        .top img{ height: 100px;}
+
+        .bottom{background-color: black; text-align: right;}
+        .bottom a{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            color: white;
+            text-decoration-line: none;
+            text-align: center;
+            line-height: 50px;
+        }
+        a:hover{
+            color: red;
+            background-color: gray;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="top">
+        <img src="img/css3.png" alt="imgg">
+    </div>
+
+    <div class="bottom">
+        <a href="#">메뉴</a>
+        <a href="#">메뉴</a>
+        <a href="#">메뉴</a>
+        <a href="#">메뉴</a>
+        <a href="#">메뉴</a>
+    </div>
+</body>
+</html>

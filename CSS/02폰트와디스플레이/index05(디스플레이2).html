@@ -7,24 +7,25 @@
 
     <style>
         *{padding: 0; margin: 0;} /* f12 개발자환경에서 양옆위아래 공간이 없어지는거 같다 */
-        ul, li, dl, dd, ol{list-style: none;} /*list-style 찾아보기 */
+        ul, li, dl, dd, ol{list-style: none;} /*list-style 찾아보기. 목록이나 순서에 기본으로 설정된 스타일을 제거함. */
         .gnb {
             text-align: center;
             background-color: #000;
         }
         .gnb > li{
-            display: inline-block;
+            display: inline-block; /* 배열은 inline 즉,가로배열 속성은 block */
         }
         .gnb > li > a{
             display: block;
             width: 100px;
             height: 100px;
-            line-height: 100px; /* 가운데 */
+            line-height: 100px; /* 가운데 block 이니깐 */
             text-decoration: none; /* 밑줄 */
             color: #fff;
         }
-        .gnb > li > a:hover{ /* hover 꼭 다시 보기 */
-            background-color: #333;
+        .gnb > li > a:hover{ /* hover 꼭 다시 보기. 액션 선택자. 마우스를 올리면 색변화 */
+
+            background-color: #cf2b2b;
         }
     </style>
 
@@ -33,7 +34,7 @@
     
 
     <header>
-        <nav class="nav">
+        <nav class="nav">  <!-- div 태그로 해도 된다 -->
             <ul class="gnb">
                 <li><a href="#">메뉴</a></li>
                 <li><a href="#">메뉴</a></li>

@@ -7,20 +7,24 @@
 </head>
     <style>
         #wrap{
-            height: 500px;
+            height: 500px; /* section은 block */
             border: 1px solid #777;
             background-image: url("img/back.jpg");
             background-repeat: no-repeat;
             /* background-size: 100%; */
-            background-size: contain; /* 무조건 이미지가 잘리지 않도록 하고, 나머지는 비워진다 */
-            background-size: cover; /* 빈공간없이 꽉채우고, 이미지를 자른다 */
+            
+            /* contain 무조건 이미지가 잘리지 않도록 하고, 나머는 빈공간이 나타난다 */
+            /* background-size: contain;  */
+            
+            /* cover 빈공간없이 꽉채우고, 이미지를 자른다 */
+            background-size: cover; 
         }
         #wrap-mid{
             height: 500px;
             border: 1px solid #777;
             background-image: url("img/back.jpg");
-            
             background-size: cover; /* 빈공간없이 꽉채우고 이미지를 자른다 */
+            /* background-attachment: scroll 이 기본값. 스크롤 따라 이미지가 움직인다 */
             background-attachment: fixed; /* 스크롤에 상관없이 백그라운드가 뒤에 고정 */
         }
     </style>

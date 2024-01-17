@@ -17,7 +17,9 @@
         }
         .bbox span, .bbox strong, .bbox b{
             display: block; /* 배치구도를 블럭으로 */
-            /* height: 100px; block 이므로 height 설정 가능*/
+            height: 100px; /*block 이므로 height 설정 가능 */
+            text-align: center;
+            vertical-align: middle; /* block 에서는 vertical-align 을 사용 할 수 없다 */
 
         }
         .cbox{  /* .cbox div 라고 안치도록 조심 */
@@ -32,9 +34,9 @@
 
             border: 1px solid #777;
             text-align: center; /*  가로적으로 가운데*/
-            line-height: 100px;  /* height 와 동일하게 맞춰서 높이를 가운데로 이동 */
-            text-decoration: none;
-            color: black;
+            line-height: 100px;  /* block 속성이므로 vertical-align 사용 안되므로 height 와 동일하게 맞춰서 높이를 가운데로 이동 */
+            text-decoration: none; /* 밑줄 색상 바꾸기 */
+            color: black; /* 글자 색상 바꾸기 */
         }
     </style>
 </head>
@@ -58,7 +60,7 @@
     </div>
 
     <div class="dbox">
-        <a href="#">인라인</a>
+        <a href="#">인라인</a> <!-- a태그는 inline -->
         <a href="#">인라인</a>
         <a href="#">인라인</a>
     </div>

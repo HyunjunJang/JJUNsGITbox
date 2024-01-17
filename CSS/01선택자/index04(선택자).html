@@ -9,10 +9,12 @@
     <style>
         /* 아래의 차이 다 확인해보기 */
 
-        /* .abox p{color:red}  
-        .abox > p{color: red;}
+        /*
+        .abox p{color:red}      abox class 밑에 있는 모든 p 태그
+        .abox > p{color: red;}  abox class 바로 밑에 딸려있는 p 태그 
         .abox > ul p{color: blue;}
-        .abox > ul > li > p{color: green;} */  
+        .abox > ul > li > p{color: green;}
+        */  
     </style>
 </head>
 <body>
@@ -20,11 +22,20 @@
     <div class="abox"> <!--abox 클래스-->
         <p>하위선택자</p> <!--abox의 1단계 자식-->
         <p>하위선택자</p>
-
-        <ul>
+<hr>
+        <ul> <!-- <ul>태그는 순서가 없는 목록 태그 -->
+            <!-- <p>태그는 본문 내용을 채운다 -->
+            <!-- <li>태그는 목록의 요소 -->
             <li><p>하위선택자</p></li>  <!--abox의 li 가 2단계 p가 3단계 자식이다-->
             <li><p>하위선택자</p></li>
         </ul>
+<hr>
+        <ol> <!-- <ol>태그는 순서가 있는 목록 태그 -->
+            <!-- <p>태그는 본문 내용을 채운다 -->
+            <!-- <li>태그는 목록의 요소 -->
+            <li><p>하위선택자</p></li>  <!--abox의 li 가 2단계 p가 3단계 자식이다-->
+            <li><p>하위선택자</p></li>
+        </ol>
     </div>
 
     <p>여기는 abox 밑인가 아닌가</p>
@@ -35,8 +46,10 @@
         /* .bbox input[속성=값] {}  */
         .bbox input[type=password] {color: red;}
         .bbox input[name="aaa"]{color: aqua;}
-        /* [] 앞은 선택자이다(ex. li 선택자) */
-        li[class*="item"]{color: palevioletred;}
+        /* [] 앞은 선택자이다(ex. li 선택자) 
+            *= 는 뒤의 글자를 포함하는 모든것을 지칭 
+            { } 내용을 실행 */
+        li[class *= "item"]{color: palevioletred;} /* li태그! li클래스가 아니라 */
     </style>
 
 
@@ -59,16 +72,16 @@
 
     <!-- 가상선택자 -->
     <style>
-        .cbox .a:active{background-color: blueviolet;}
-        .cbox .b:hover{background-color: black;}
-        .cbox input:focus{border: 1px solid red; outline: none;}
+        .cbox .a:active{background-color: blueviolet;} /* :active 마우스 클릭했을 때 작동 */
+        .cbox .b:hover{background-color: black;} /* :hover 마우가 올라갔을 때 작동 */
+        .cbox input:focus{border: 1px solid red; outline: none;} /* 눌렀을 때 작동하는데 border에 쓰인듯 */
         /* :after , :before 같은 가상선택자도  */
     </style>
 
     <div class="cbox">
-        <div class="a">액티브</div> <!--div는 블럭이라서 한줄을 다 차지한다. 즉 인라인-->
+        <div class="a">액티브</div> <!--div는 블럭이라서 한줄을 다 차지한다.-->
         
-        <div class="b">호버</div> <!--마우스 닿았을때-->
+        <span class="b">호버</span><br> <!--span는 인라인이라서 입력한 크기만큼-->
         
         포커스:<input type="text" name="aaa"> <!--focus는 쓸수잇는곳이 있다-->
     </div>
