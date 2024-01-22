@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 반응형 디자인의 기본은 %단위를 잘 써야함 -->
+    <style>
+        *{padding: 0; margin: 0;}
+        li, ul {list-style: none;}
+        img{max-width: 100%;height: auto;}
+
+        /* ul박스를 웹환경에서는 6개, 테블릿환경에서는 4개, 모바일환경에서는 2개 보이게 만들기 */
+        
+        .box{
+                width:80%; /* 고정 픽셀을 주지 않는다 */
+                border: 1px solid #777;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+        /* web */
+        @media(min-width:1240px){
+            
+            .box li{
+                float: left;
+                width: 16.6666%;
+            }
+        }
+        
+        /* table */
+        @media(max-width:1239px) and (min-width:767px){
+            .box li{
+                float: left;
+                width: 25%;
+            }
+        }
+        
+        /* mobile */
+        @media(max-width:766px){
+            .box li{
+                float: left;
+                width: 50%%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <ul class="box">
+        <li>박스</li>
+        <li>박스</li>
+        <li>박스</li>
+        <li>박스</li>
+        <li>박스</li>
+        <li>박스</li>
+        <li>박스</li>
+        <li>박스</li>
+        <li>박스</li>
+        <li>박스</li>
+        <li>박스</li>
+        <li>박스</li>
+    </ul>
+</body>
+</html>
