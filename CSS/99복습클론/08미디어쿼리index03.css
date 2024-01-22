@@ -1,0 +1,15 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ul, li{list-style: none;}
+img{width: 100%; height: auto;}
+.abox{width: 1008px; margin: 0 auto;}
+.abox h2{font-size: 50px;color: white;background-image: url(images/bg.png);height: 200px;padding: 20px 0 0 20px;}
+
+.bbox{width: 1008px; margin: 0 auto;}
+.bbox >ul{background-color: red; overflow: hidden;padding: 10px;}
+.bbox >ul > li{color: white; float: left; width: 25%;text-align: center;}
+.bbox >ul > li >a{text-decoration: none;color: white;}
+.bbox >ul > li >a:hover{background-color: brown;}
+
+.cbox{padding: 10px;overflow: hidden; width: 1008px; margin: 0 auto;}
+.cbox .left{float: left; width: 700px;}
+.cbox .right{float: right; width: 280px;}
