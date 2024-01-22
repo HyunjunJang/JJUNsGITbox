@@ -33,7 +33,7 @@ img{max-width: 100%; height: auto;}
     #wrap{width: 100%;}
     #wrap .logo{background-image: url(images/bg.png); color:white; height: 100px; padding: 10px;}
     #wrap nav{background-color: red;}
-    #wrap nav >ul >li{display: inline-block;display: block; text-align: center; padding: 20px 30px;}
+    #wrap nav >ul >li{display: inline-block;display: block; text-align: center; padding: 10px 30px;}
     #wrap nav >ul >li >a{ text-decoration: none; color: white;}
     #wrap nav >ul >li >a:hover{background-color: brown;}
     

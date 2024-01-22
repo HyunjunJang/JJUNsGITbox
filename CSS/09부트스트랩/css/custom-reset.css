@@ -1,0 +1,28 @@
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
+
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul, li, ol, dd, dl{list-style: none;}
+img{max-width: 100%; height: auto;}
+/* 웹폰트 */
+html, body{font-family: 'Sunflower', sans-serif; width: 100%; min-width: 320px;}
+
+
+/* 
+input[type=checkbox], input[type=radio]{ 브라우저에서 제공하는 자체 디폴트 디자인을 없앤다. 왜냐면 커스터마이징 할 것이므로
+    -webkit-appearance: none; 구글,사파리 디자인 
+    -moz-appearance: none; 파이어폭스 디자인
+    appearance: none;  나머지 브라우저 
+
+     자체 디자인을 한다 
+    width: 20px;
+    height: 20px;
+    border: 1px solid #777;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked, input[type=radio]:checked{
+    outline: none;
+    background-color: #3498db;
+} */
