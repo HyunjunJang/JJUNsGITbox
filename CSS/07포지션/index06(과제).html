@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{padding: 0; margin: 0;}
+        ul, li{list-style: none;}
+
+        
+        .abox{
+            background-image: url(images/bg.png);
+            text-align: center;
+            padding: 10px 0px;
+        }
+        .abox .applestore{
+            margin: 0 auto;
+            
+        }
+        .bbox > ul{
+            text-align: center;
+            background-color: black;
+            height: 50px;
+            line-height: 50px;
+        }
+        .bbox >ul >li{
+            display: inline-block;
+            
+            margin: 0 10px;
+            
+        }
+        .bbox >ul >li >a{
+            color: white;
+            margin: 0px 10px;
+            text-decoration: none;
+        }
+        .bbox >ul >li:hover{
+            background-color: #777;
+        }
+        .cbox{
+            text-align: center;
+        }
+      
+        .cbox .cboxinner{
+            
+            width: 1060px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .cboxinner .cboximg1{
+            float: left;
+            margin: 40px;
+        }
+        .dbox{
+            background-color: white;
+            text-align: center;
+            position: sticky;
+            top: 0px;
+        }
+        .dbox .dboxcontent{
+            display: inline;
+            font-size: 20px;
+            margin: 0px 15px;
+        }
+        .ebox{
+            background-image: url(images/bg.png);
+           text-align: center;
+            
+        }
+        .ebox > div{
+            display: inline-block;
+        }
+        .ebox .eboxside1{
+            position: relative;
+            bottom: 1400px;
+            right: 25px;
+        }
+        .ebox .fboxside2{
+            position: relative;
+            bottom: 1400px;
+            left: 25px;
+        }
+        .buttons{
+            background-color: red;
+            position: fixed;
+            top: 80px;
+            right: 80px;
+            width: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="abox">
+        <div class="applestore">
+            <img src="images/logo.jpg" alt="">
+            
+        </div>
+        
+    </div>
+
+    <div class="bbox">
+        <ul>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+        </ul>
+    </div>
+
+    <div class="cbox">
+        <div class="cboxinner">
+        <div class="cboximg1"> <!-- 플로팅 왼쪽으로 -->
+            <img src="images/item01.png" alt="아이폰">
+            <div>iPhone</div>
+        </div>
+        <div class="cboximg1"> <!-- 플로팅 왼쪽으로 -->
+            <img src="images/item02.png" alt="아이팟">
+            <div>iPod</div>
+        </div>
+        <div class="cboximg1"> <!-- 플로팅 왼쪽으로 -->
+            <img src="images/item03.png" alt="아이패드">
+            <div>iPad</div>
+        </div>
+        <div class="cboximg1"> <!-- 플로팅 왼쪽으로 -->
+            <img src="images/item04.png" alt="아이맥">
+            <div>iMac</div>
+        </div>
+        </div>
+    </div>
+
+    <div class="dbox"> <!-- position sticky -->
+        <div class="dboxcontent">아이콘</div>
+        <div class="dboxcontent">아이콘</div>
+        <div class="dboxcontent">아이콘</div>
+        <div class="dboxcontent">아이콘</div>
+    </div>
+
+    <div class="ebox">
+        <div class="eboxside1">
+            <div ><img src="images/side01.png" alt=""></div>
+            <div ><img src="images/side02.png" alt=""></div>
+        </div>
+        <div>
+            <img src="images/ipad.jpg" alt="asdf">
+        </div>
+        <div class="fboxside2">
+            <div><img src="images/side03.png" alt=""></div>
+            <div><img src="images/side04.png" alt=""></div>
+        </div>
+    </div>
+    
+    <a href="#" class="buttons">TOP</a>
+    
+    
+
+    
+</body>
+</html>

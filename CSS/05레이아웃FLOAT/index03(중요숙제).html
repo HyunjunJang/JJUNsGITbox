@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{padding: 0; margin: 0;}
+
+        .outter{
+            width: 500px;
+            border: 1px solid #777;
+            margin: 0 auto;
+            padding: 5px;
+            overflow: hidden;
+        }
+        .outter .hidden{
+            width: 25%;
+            padding: 5px;
+            box-sizing: border-box;
+            float: left;
+        }
+        .outter .hidden .inner{
+            border: 1px solid #777;
+        }
+        img{width: 100%; height: auto;} /* 이거때문에 뻘짓 존나했네 */
+        
+    </style>
+
+</head>
+<body>
+    <!-- 
+        1.제일큰박스는 보더
+        2.안에 보더 없는 박스를 왼쪽부터 쌓는다
+        3.보더 없는 박스 안에 보더있는 박스 하나 만들기
+     -->
+
+     <div class="outter"> <!-- 패딩 5 보더있고 -->
+        <div class="hidden"> <!-- 보더 없고, 패딩 5, 왼족으로 플롯 -->
+            <div class="inner">
+                <div>
+                    <img src="img/css3.png" alt="qwer">
+                    <p>모든 패딩 5px</p>
+                </div>
+            </div>
+        </div>
+        <div class="hidden"> <!-- 보더 없고, 패딩 5, 왼족으로 플롯 -->
+            <div class="inner">
+                <div>
+                    <img src="img/css3.png" alt="qwer">
+                </div>
+                <div>
+                    <p>모든 패딩 5px</p>
+                </div>
+            </div>
+        </div>
+        <div class="hidden"> <!-- 보더 없고, 패딩 5, 왼족으로 플롯 -->
+            <div class="inner">
+                <div>
+                    <img src="img/css3.png" alt="qwer">
+                </div>
+                <div>
+                    <p>모든 패딩 5px</p>
+                </div>
+            </div>
+        </div>
+        <div class="hidden"> <!-- 보더 없고, 패딩 5, 왼족으로 플롯 -->
+            <div class="inner">
+                <div>
+                    <img src="img/css3.png" alt="qwer">
+                </div>
+                <div>
+                    <p>모든 패딩 5px</p>
+                </div>
+            </div>
+        </div>
+        <div class="hidden"> <!-- 보더 없고, 패딩 5, 왼족으로 플롯 -->
+            <div class="inner">
+                <div>
+                    <img src="img/css3.png" alt="qwer">
+                </div>
+                <div>
+                    <p>모든 패딩 5px</p>
+                </div>
+            </div>
+        </div>
+        <div class="hidden"> <!-- 보더 없고, 패딩 5, 왼족으로 플롯 -->
+            <div class="inner">
+                <div>
+                    <img src="img/css3.png" alt="qwer">
+                </div>
+                <div>
+                    <p>모든 패딩 5px</p>
+                </div>
+            </div>
+        </div>
+        <div class="hidden"> <!-- 보더 없고, 패딩 5, 왼족으로 플롯 -->
+            <div class="inner">
+                <div>
+                    <img src="img/css3.png" alt="qwer">
+                </div>
+                <div>
+                    <p>모든 패딩 5px</p>
+                </div>
+            </div>
+        </div>
+        <div class="hidden"> <!-- 보더 없고, 패딩 5, 왼족으로 플롯 -->
+            <div class="inner">
+                <div>
+                    <img src="img/css3.png" alt="qwer">
+                </div>
+                <div>
+                    <p>모든 패딩 5px</p>
+                </div>
+            </div>
+        </div>
+        
+
+
+     </div>
+</body>
+</html>

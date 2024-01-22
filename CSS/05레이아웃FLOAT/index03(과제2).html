@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .abox{
+            width: 500px;
+            border: 1px solid #777;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .abox .bbox{
+            width: 50%;
+            box-sizing: border-box;
+            float: right;
+        }
+        .abox .bbox .cbox{
+            border: 1px solid #777;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .fbox{
+            float: left;
+        }
+        .gbox{
+            float: right;
+        }
+        .buttons{
+            border: 1px solid #777;
+            padding: 0px;
+            box-sizing: border-box;
+            width: 48%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="abox">1
+        <div class="bbox">
+            
+            <div class="cbox">1
+                <div class="dbox">1</div>
+                <div class="ebox">1</div>
+            </div>
+            <div class="cbox">
+                <div class="fbox"> <!-- 왼쪽 -->
+                    가격
+                </div>
+                <div class="gbox"> <!-- 오른쪽 -->
+                    10000원
+                </div>
+            </div>
+            <div class="cbox">
+                <button class="buttons">장바구니</button>
+                <button class="buttons">구매하기</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

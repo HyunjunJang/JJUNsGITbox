@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 
+        중요!!!
+        포지션은 3D 로 Z축을 생각하면서 사용
+        사용하는 곳은 박스 안에서 따로 움직이는 듯한 박스를 Z축을 통해 이용할때
+
+        규칙
+        1.움직일 대상 absolute
+        2.부모에 relative를 넣는다
+        3.top,bottom 중 1개, left,right 중 1개 를 이용해서 움직인다
+    -->
+    <style>
+        .box{
+            width: 500px;
+            border: 1px solid #777;
+            margin: 0 auto;
+        }
+        p{
+            border: 1px solid #777;
+            height: 100px;
+            margin: 0;
+        }
+        .inner1{
+            background-color: red;
+        }
+        .content{ /* 여기가 inner2의 부모 */
+            position: relative; 
+        }
+        .inner2{
+            background-color: blue;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            /* 
+            absolute는 부모영역 기반으로 움직인다(position: relative; 가 있는 부모)
+            top,bottom,left,right를 통해 위치 조정한다
+            만약 부모에 relative가 없으면 body 기준으로 움직인다
+             */
+        }
+        .inner3{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="content">
+            <p class="inner1">포지션</p>
+            <p class="inner2">포지션</p>
+            <p class="inner3">포지션</p>
+        </div>
+    </div>
+
+</body>
+</html>

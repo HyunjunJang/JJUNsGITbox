@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 포지션에서 relative 
+        본인 위치를 기준으로 Z축으로 잡아늘린다 생각-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap{
+            width: 500px;
+            margin: 0 auto;
+        }
+        .box{height: 100px; border: 1px solid #777}
+        .mybox{
+            
+            position: relative;
+            left: 20px;
+            top:  20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box"><img src="img/back.jpg" alt="1"></div>
+        <div class="box mybox" ><img src="img/css3.png" alt="2"></div> <!-- 클래스가 2개 -->
+        <div class="box"><img src="img/kakao_login_medium_wide.png" alt=""></div>
+    </div>
+</body>
+</html>

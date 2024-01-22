@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {  /* 4등분에 대해서 생각하기 */
+            width: 800px;
+            border: 1px solid gray;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .box .item{
+            border-right: 1px solid #777;
+            float: left;
+            width: 25%;
+            box-sizing: border-box;
+        }
+        .box .item img{width: 100%; height: auto;}
+        .content {
+            overflow: hidden;
+        }
+        .content .left{float: left;}
+        .content .left strong{display: block;}
+        .content .right{float: right;}
+
+        .buttons{overflow: hidden;}
+        .buttons button{float: left; width: 50%; padding: 0px;}
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <div class="item">
+            <img src="img/css3.png" alt="">
+            <div class="content">
+
+                <div class="left"> <!-- 왼쪽으로 -->
+                    <strong>좌측</strong>
+                    <strong>좌측</strong>
+                    <strong>좌측</strong>
+                    <!-- strong은 inline이다 -->
+                </div> 
+                <div class="right"> <!-- 오른쪽으로 -->
+                    우측
+                </div>
+            </div>
+            
+            <div class="price">
+                가격영역
+            </div>
+            
+            <div class="buttons">
+                <!-- 버튼영역 -->
+                <button>장바구니</button>
+                <button>구매하기</button>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/css3.png" alt="">
+            <div class="content">
+
+                <div class="left"> <!-- 왼쪽으로 -->
+                    <strong>좌측</strong>
+                    <strong>좌측</strong>
+                    <strong>좌측</strong>
+                    <!-- strong은 inline이다 -->
+                </div> 
+                <div class="right"> <!-- 오른쪽으로 -->
+                    우측
+                </div>
+            </div>
+            
+            <div class="price">
+                가격영역
+            </div>
+            
+            <div class="buttons">
+                <!-- 버튼영역 -->
+                <button>장바구니</button>
+                <button>구매하기</button>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/css3.png" alt="">
+            <div class="content">
+
+                <div class="left"> <!-- 왼쪽으로 -->
+                    <strong>좌측</strong>
+                    <strong>좌측</strong>
+                    <strong>좌측</strong>
+                    <!-- strong은 inline이다 -->
+                </div> 
+                <div class="right"> <!-- 오른쪽으로 -->
+                    우측
+                </div>
+            </div>
+            
+            <div class="price">
+                가격영역
+            </div>
+            
+            <div class="buttons">
+                <!-- 버튼영역 -->
+                <button>장바구니</button>
+                <button>구매하기</button>
+            </div>
+        </div>
+        <div class="item" style="border: none;">
+            <img src="img/css3.png" alt="">
+            <div class="content">
+
+                <div class="left"> <!-- 왼쪽으로 -->
+                    <strong>좌측</strong>
+                    <strong>좌측</strong>
+                    <strong>좌측</strong>
+                    <!-- strong은 inline이다 -->
+                </div> 
+                <div class="right"> <!-- 오른쪽으로 -->
+                    우측
+                </div>
+            </div>
+            
+            <div class="price">
+                가격영역
+            </div>
+            
+            <div class="buttons">
+                <!-- 버튼영역 -->
+                <button>장바구니</button>
+                <button>구매하기</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

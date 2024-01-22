@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .reply{
+            border: 1px solid #777;
+            width: 500px;
+            margin: 0 auto;
+            position: relative;
+            padding: 10px;
+        }
+        .reply img{
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        .content{
+            padding-left: 50px;
+        }
+        .content textarea{
+            width: 100%;
+            box-sizing: border-box;
+            resize: none;
+        }
+        .content .control{
+            overflow: hidden;
+        }
+        .content .control .left{
+            float: left;
+        }
+        input{
+            display: block;
+        }
+        .content .control .right{
+            float: right;
+        }
+        text{margin-top: 5px}
+    </style>
+</head>
+<body>
+    <div class="reply">
+        <img src="img/css3.png" alt="" width="50">
+        <div class="content">
+            <textarea></textarea>
+            <div class="control">
+                <div class="left">
+                    
+                        <input type="text">
+                        <input type="text">
+                    
+                </div>
+                <button class="right">등록하기</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

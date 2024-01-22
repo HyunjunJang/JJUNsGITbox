@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title> Web Flavor </title>
+	<!-- <link rel="stylesheet" href="css/style.css" /> -->
+	<style type="text/css">
+		* {margin: 0; padding:0; }
+		ul, li {list-style:none;} 
+		body {background-image: url(images/bg.png);}
+		header .logo {margin:20px auto; text-align:center;}
+        .menu {background-color: black; text-align: center; width:100%;}
+        .menu li {display: inline-block; padding: 20px;}
+        .menu li:hover {background-color: #4d4d4d;}
+        .menu li a {text-decoration: none; color: white; font-weight: 800;}
+		
+		.slider {background:white;}
+		.slider ul {width:960px; margin:0 auto; overflow:hidden;}
+		.slider ul li {text-align:center; width:25%; margin:40px 0; float:left; box-sizing: border-box;}
+
+		.mid-menu {
+			position: sticky; 
+			top: 0;
+			text-align: center;
+			z-index: 10;
+			background-color: #fff;
+			
+		}
+		.mid-menu > li {
+			display: inline-block;
+			padding: 10px;
+			
+		}
+
+		section {width:700px; margin:0 auto; position:relative;}
+		section .left {position:absolute; top:0; left:-220px;}
+		section .right {/* position:absolute; *//* top:0; *//* right:-220px; */}
+
+		.top {width:50px; height:50px; background:#c13333;
+				position:fixed; top:40px; right: 40px; font-size:12px; 
+				text-align:center; line-height:50px;
+				z-index: 20;
+			}	
+
+	</style>
+</head>
+<body>
+
+
+	<header>
+		<div class="logo">
+			<img src="images/logo.jpg" alt="logo">
+		</div>
+		<nav>
+            <ul class="menu">
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴1</a></li>
+            </ul>
+        </nav>
+		
+		
+		<div class="top" ><a href="#">TOP</a></div>
+	</header>
+	
+	<article class="slider">
+		<ul>
+			<li><img src="images/item01.png" alt=""><br>iPhone(디스플레이 or 플롯)</li>
+			<li><img src="images/item02.png" alt=""><br>iPod</li>
+			<li><img src="images/item03.png" alt=""><br>iPad</li>
+			<li><img src="images/item04.png" alt=""><br>iMac</li>
+		</ul>
+	</article>
+	
+	<ul class="mid-menu">
+		<li>아이콘</li>
+		<li>아이콘</li>
+		<li>아이콘</li>
+		<li>이거는 스티키</li>
+	</ul>
+	
+	<section>
+		<div class="content">
+			<img src="images/ipad.jpg" alt="">
+		<div>
+		
+		<!-- <aside class="left">
+			<img src="images/side01.png" alt="">
+			<br><br>
+			<img src="images/side02.png" alt="">
+			<p>이거는 포지션</p>
+		</aside>
+		<aside class="right">
+			<img src="images/side03.png" alt="">
+			<br><br>
+			<img src="images/side04.png" alt="">
+			<p>이거는 포지션</p>
+		</aside>
+		 -->
+
+		
+	</section>
+
+
+</body> 
+</html>

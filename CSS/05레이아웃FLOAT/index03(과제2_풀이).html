@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{padding: 0;margin: 0;}  /* 패딩 마진 0으로 놓고 시작하면 좋다 */
+
+        .box{width: 500px; border: 1px solid #777; margin: 0 auto; overflow: hidden;}
+        .box > .left{float: left; width: 50%; box-sizing: border-box;}
+
+        .con{overflow: hidden; margin-top: 30px; border-top: 1px solid #777;}
+        .con .left{float: left;}
+        .con .right{float: right;}
+        .order {box-sizing: border-box;}
+        .order button{width: 50%;}
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="left">사진</div>
+        <div class="left" style="border: 1px solid #777;">
+            <div class="top">
+                <p>제목</p>  <!-- 이걸 왜 못하지 -->
+                <p>내용</p>
+            </div>
+
+            <div class="mid">
+                <div class="con">
+                    <span class="left">가격</span>
+                    <span class="right">10000원</span>
+                </div>
+
+                <div class="order">
+                    <button class="left">장바구니</button>
+                    <button class="right">구매하기</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

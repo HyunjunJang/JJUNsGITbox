@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{padding: 0; margin: 0;}
+        .outerbox{
+            width: 500px;
+            margin: 0 auto;
+            border: 1px solid #777;
+            overflow: hidden;
+            padding: 15px 15px 15px 90px;
+            position: relative;
+        }
+        .outerbox .imgposition{
+            position: absolute;
+            top: 15px;
+            left: 10px;
+        }
+        .outerbox textarea{
+            width: 100%;
+        }
+        .outerbox .left_box{
+            width: 25%;
+            display: inline-block;
+            overflow: hidden;
+        }
+        .outerbox .left_box .left{
+            float: left;
+            width: 100%;
+            border: 1px solid #777;
+            box-sizing: border-box;
+            
+        }
+        .outerbox .right{
+            float: right;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="outerbox">
+        <div class="imgposition">
+            <img src="img/css3.png" alt="logo" width="70">
+        </div>
+        
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <div class="left_box">
+            <textarea class="left">
+            </textarea>
+            <textarea class="left">
+            </textarea>
+        </div> <!-- 왼쪽 플로팅 -->
+        
+        <button class="right"> <!-- 오른쪽 플로팅 -->
+            등록하기
+        </button>
+
+    </div>
+</body>
+</html>

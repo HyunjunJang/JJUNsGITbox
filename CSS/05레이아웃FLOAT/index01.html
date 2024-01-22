@@ -54,19 +54,20 @@
     <hr>
     <!-- 메뉴를 float으로 정확히 5등분 -->
     <style>
-        ul, li {list-style: none;}
+        ul, li {list-style: none;} /* 기본형 스타일 제거 */
+        
         .cbox{
-            
+            width: 500px;
             border: 1px solid #777;
             margin: 0 auto;
-            width: 500px;
-            overflow: hidden;
             padding: 0px;
+            overflow: hidden; /* float을 쓰기위해서 */
         }
 
         .cbox li{
             float: left;
             width: 20%;
+            /* height: 20%; 높이에 대해 생각*/
             border: 1px solid #777;
             box-sizing: border-box;
             text-align: center;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .abox{
+        width: 500px;
+        border: 1px solid #777;
+        margin: 0 auto;
+        
+        box-sizing: border-box;
+    }
+    .abox .bbox{
+        padding: 20px 0px;
+        border: 1px solid #777;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+    .abox .bbox .cbox{
+        border: 1px solid #777;
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+    }
+</style>
+
+<body>
+    <!-- 
+        1.제일큰 박스
+        2.위아래 패딩 주고 박스 한개
+        3.위아래 패딩 주고 박스 한개
+        4.제일 안쪽 박스 2분할
+     -->
+
+     <div class="abox">
+        탑
+        <div class="bbox">
+            <div class="cbox">
+                2분할
+            </div>
+            <div class="cbox">
+                2분할
+            </div>
+        </div>
+        바텀
+     </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* min-width:767px 즉, width 767px 이상에서 동작한다 */
+        @media(min-width:767px){
+            .box{
+                background-color: red;
+                color: aqua;
+            }
+        }
+        /* 최대너비 766px 즉, 그 이하에서만 동작한다 */
+        @media(max-width:766px){
+            .box{
+                background-color: blue;
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <h3>미디어쿼리(반응형 디자인)</h3>
+    <!-- 디바이스의 너비에 따라서 다른 크기로 만들어지는 디자인 
+    웹, 모바일, 태블릿 등에 따른 변경-->
+
+    <div class="box">
+        내용................
+    </div>
+
+</body>
+</html>

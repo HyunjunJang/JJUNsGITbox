@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap{
+            width: 500px;
+            margin: 0 auto;
+            box-shadow: 0 15px 30px rgb(0, 0, 0, 0.15);
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 15px;
+        }
+        .input-box label{
+            display: block;
+            margin-top: 5px;
+            font-weight: 700;
+        }
+        /* 인풋박스 디자인 */
+        .input-box input{
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            box-sizing: border-box;
+            border: 1px solid #000;
+            margin-top: 5px;
+        }
+        .input-box input:focus{
+            outline: none;
+            border: 1px solid green;
+        }
+
+        /* 버튼디자인 */
+        .input-box button{
+            background-color: rgb(96, 230, 96);
+            width: 100%;
+            border: none;
+            color: #fff;
+            font-weight: 900;
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+
+            transition: all 0.8s ease-in-out 0s;/* 변경할 속성, 시간, 타이밍펑션, 딜레이 */
+        }
+
+        /* transition */
+        .input-box button:hover{
+            background-color: rebeccapurple;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrap"> <!-- 세로로 배열 박스는 그냥 추가 -->
+        <h3>회원가입</h3>
+        <div class="input-box">
+            <label>아이디</label>
+            <input type="text" placeholder="영문자 숫자 6글자">
+        </div>
+        
+        
+        <div class="input-box">
+            <label>비밀번호</label>
+            <input type="text" placeholder="영문자 숫자 10글자 이상">
+        </div>
+        <div class="input-box">
+            <button type="button">로그인</button>
+        </div>
+
+    </div>
+</body>
+</html>
