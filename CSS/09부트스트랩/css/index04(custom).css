@@ -1,0 +1,5 @@
+.join-style{
+    margin: 0 auto;
+    float: none;
+    box-shadow: 0 8px 16px rgb(0,0,0, 0.3); /* 2배2배로 주면 괜찮다 */
+}
