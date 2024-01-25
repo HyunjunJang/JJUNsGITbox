@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- js 외부 파일 링크//
+        순서와 위치가 중요하다 -->
+    <script src="index01.js"></script>
+</head>
+<body>
+    
+    <script> /* 스크립트 태그를 쓰고 써야한다. 위치는 어디든 상관없다. 다만 위에서부터 실행되므로 굉장히 순서에 민감하다*/
+        var a = 1;
+        var b = 10;
+
+        //콘솔창으로 출력
+        console.log(a); /* 스크립트의 출력문 -> 화면에 나타나지 않고 개발자도구의 콘솔창에 출력 */
+        console.log(b);
+
+        //경고창으로 출력
+        //alert(a);
+
+        //확인창으로 출력 -> 확인, 취소 입력에 따라 true, false 값 반영
+        // confirm(a + "가 맞습니까?");
+
+        //브라우저로 출력 document.write(a) 안쓴다
+    </script>
+
+</body>
+    <!-- <script src="index01.js"></script> 마지막에 실행된다면 오류가 뜰것이다 -->
+</html>

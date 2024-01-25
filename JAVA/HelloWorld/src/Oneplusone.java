@@ -1,6 +1,13 @@
 public class Oneplusone {
     public static void main(String[] args) {
-        System.out.println(1+1);
+        int a, b, c, d;
+        a = b = 5;
+        c= --a % --a;
+        d = b++ * b++;
+        System.out.println(c);
+        System.out.println(d);
+        System.out.println("%d");
+
     }
 
 }

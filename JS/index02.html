@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        a = 1; //var a 라고 안했지만 변수로 인식한다(숫자)
+        var a = '10'; //(문자) 동일명 변수 선언 가능. 마지막 변수 설정이 적용
+        var b = "10"; //(문자)
+        
+        b = "hello"; //변수의 변경
+        a = 3.14; //변수의 변경에서 타입의 변경도 유연하다
+
+        var c = a + b;
+
+        console.log(a + b); //숫자+문자=문자
+        console.log(a, b, 1, 2, 5, 'world');  //나열해서 각각 출력
+        
+        console.log("---------------------------------------------");
+
+        var x = true;
+        console.log(x)
+
+        var y; //변수 y는 선언했지만 초기값을 선언 하지않음 -> undefined
+        console.log(y)
+
+        var z = document.getElementById("aaa");
+        console.log(z) //초기화는 했지만 값이 없는 경우
+
+    </script>
+</body>
+</html>
