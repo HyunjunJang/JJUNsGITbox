@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[2,4,6,8,10];
+        //향상된 구문 for ~ in;
+        for(var a in arr){ //arr값을 뽑아서 a에 넣는다
+            // console.log(a); //단 인덱스 값을 불러온다
+            // 따라서 사용하기 위해서는
+            console.log(a, arr[a]);
+        }
+
+        var obj = {'a':100, 'b':200, 'c':300}; //key:value 로 이루어진 객체
+        for(var a in obj){
+            console.log(a, obj[a]); //key가 뽑힌다. 값을 구하려면 한번 더 호출 해야한다.
+        }
+    console.log("---------------------------------------");
+    ////////////////////////////////////////////////////////////////////////
+    //탈출문 : break-반복중단, continue-반복다음
+    for(var i=0; i < arr.length; i++){
+
+        if (i==3) {
+            // break;
+            // continue;
+        }
+        console.log(arr[i]);
+    }
+    </script>
+</body>
+</html>
