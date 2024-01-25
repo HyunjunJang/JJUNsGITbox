@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //클로저를 통한 getter, setter
+        function aaa(){
+            var name = "홍길동"; 
+            // return function(x){
+            //     name = x;
+            //     return name;
+            // }
+            return{ //{}는 객체.object
+                getName: function(){ //key: getName. value:function
+                    return name;
+                },
+                setName: function(x){
+                    name = x;
+                }
+            }
+        } //name은 지역변수로 스코프가 이 함수까지
+
+        // var fff = aaa(); //fff는 함수변수
+        // var result = fff("이순신");
+        // console.log(result);
+
+        var obj = aaa();
+        console.log(obj);
+
+        console.log(obj.getName());
+        console.log(obj.setName('이순신'));
+        console.log(obj.getName());
+
+    </script>
+</body>
+</html>

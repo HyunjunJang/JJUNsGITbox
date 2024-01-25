@@ -8,7 +8,7 @@
 <body>
     <script>
         
-        //함수 호출. 함수 생선전에 호출해도 호출된다. 호이스팅(단, 선언적 함수만)
+        //함수 호출. 함수 생성전에 호출해도 호출된다. 호이스팅(단, 선언적 함수만)
         a();
         //매개변수도 없고 반환도 없는 함수
         function a(){
@@ -20,6 +20,7 @@
             var result = x+y+z;
             return result //값의 반환
         }
+        console.log(b(2,3,'이순신'));
         var result = b(1,"홍길동",3);
         console.log(result);
         
@@ -28,7 +29,6 @@
         console.log(func); //콘솔 호출시 설명
         var k = func(1, 2, 3); //return값이 있으므로 변수로 값을 받아줘야한다
         console.log(k);
-        
     </script>
 </body>
 </html>

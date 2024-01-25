@@ -10,13 +10,14 @@
         var arr=[2,4,6,8,10];
         //향상된 구문 for ~ in;
         for(var a in arr){ //arr값을 뽑아서 a에 넣는다
-            // console.log(a); //단 인덱스 값을 불러온다
-            // 따라서 사용하기 위해서는
+            //단 인덱스 값을 불러온다
+            // 따라서 배열 값을 호출하기 위해서는 arr[a] 활용한다
             console.log(a, arr[a]);
         }
+        console.log("---------------------------------------");
 
-        var obj = {'a':100, 'b':200, 'c':300}; //key:value 로 이루어진 객체
-        for(var a in obj){
+        var obj = {'a':100, 'b':200, 'c':300}; //{} 는 key:value 로 이루어진 객체. []는 배열
+        for(var a in obj){ //이때는 key 값들이 뽑힌다. key의 데이터타입에 따라 순서가 조금 다른거같다
             console.log(a, obj[a]); //key가 뽑힌다. 값을 구하려면 한번 더 호출 해야한다.
         }
     console.log("---------------------------------------");
@@ -26,7 +27,7 @@
 
         if (i==3) {
             // break;
-            // continue;
+            continue;
         }
         console.log(arr[i]);
     }

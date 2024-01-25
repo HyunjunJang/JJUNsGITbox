@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var num1 = 10;
+        if(num1 === 10){
+            var num1 = 100;
+            var num2 = 200;
+        }
+        console.log(num1);
+        console.log(num2);
+
+        for(var i=1; i<=10; i++){
+            // console.log(i);
+            console.log("hello");
+        }
+        console.log(i); //i가 살아있다. 왜냐하면 전역변수이기 때문. {}는 전역 지역을 나누는 기준이 아니다
+
+        function add(){
+             var x = 1; //함수 안에서 선언된 x는 지역변수이다
+        }
+        add();
+        console.log(x); //지역변수인 x는 여기서 적용안된다
+
+        //let변수 - ES6
+        //let - 스코프가 중괄호, 변수의 중복 선언X 
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //페이지 실행 즉시 호출 할 함수를 기술
+        (function () {
+            console.log("즉시실행함수");
+        })();
+
+        (function (a, b, c) {
+            console.log("즉시실행함수", a, b, c);
+        })(1,2,3); //제일 뒤에오는 () 에서 매개값을 설정할 수 있다.
+        var compute = (a,b) => a+b;
+        console.log(compute(1,4));
+    </script>
+
+</body>
+</html>
+

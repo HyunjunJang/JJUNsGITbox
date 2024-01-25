@@ -8,22 +8,25 @@
 <body>
     
     <script>
-        //배열의 선언방법 1
+        //배열의 선언방법 1 var s = [1,2]; var s = [3,54,] var arr = [   ]  var arrr = ['하이','no'] var a = [];
+        var srr = [1, 3.4, 'ss'] //타입 섞어도 상관없음
+        console.log(srr);
         var arr = [1,2,3];
         console.log(arr);
 
         //배열의 사용 index
-        arr[0] = 100;
+        arr[0] = 100; //arr 배열의 0번 인덱스에 100을 넣는다
         console.log(arr);
-        console.log(arr[0]);
+        console.log(arr[0]); //arr 배열의 0번 인덱스 값을 출력한다
 
         //배열의 길이 확인 length
-        console.log('길이:' , arr.length);
+        console.log('길이:' + arr.length);
+        console.log('길이:' , arr.length , arr[2]); // ,는 여러개 출력하는 방법이다
         
         ///////////////////////////////////////////////////////////////////////
         //배열의 선언방법 2
-        var arr2 = new Array(); //빈 배열 생성
-        var arr3 = new Array(10); //크기가 10인 배열 생성. 값을 하나만 줬을때는 크기를 의미
+        var arr2 = new Array(); //빈 배열 생성 var aa = new Array(); var gg = new Array(); var dd = new Array(); var dsk = [];
+        var arr3 = new Array(10); //크기가 10인 배열 생성. 값을 하나만 줬을때는 크기를 의미 var aqwe = new Array(10) 
         var arr4 = new Array(10,1,2,3,4,5); //값을 여러개 입력하면 초기값이 지정된다
 
         console.log(arr2);
@@ -32,13 +35,14 @@
 
         ////////////////////////////////////////////////////////////////////////////
         //배열의 다양한 함수
-        var arr = new Array();
+        var arr = new Array(); // var arr = [];
         arr.push(1); //끝에 값을 추가 push
         arr.push(2);
         arr.push(3);
         console.log(arr);
 
         var x = arr.pop(); //pop 설명 보기. 마지막 값을 반환하고 배열에서 삭제한다
+        //인덱스를 적지 않는다. 왜냐면 알아서 제일 마지막 값을 반환+삭제한다
         console.log(x);
         console.log(arr);
 
@@ -46,11 +50,15 @@
         console.log(arr);
 
         var x = arr.shift(); //제일 앞 숫자를 지우고 그 값을 반환하다
+        console.log(x);
         console.log(arr);
 
         //값 위치 찾기
         var x = arr.indexOf(100);
         console.log(x, '번째 인덱스에 100이 있습니다');
+        var y = arr.indexOf(2);
+        console.log(y);
+        console.log(y);
 
         var x = arr.indexOf(1000) //-1이 반환되면 찾는값이 없음
         console.log(x);
