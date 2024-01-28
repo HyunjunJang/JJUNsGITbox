@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    ID:<input type="input" id="id">
+    기억하기<input type="checkbox" id="remember">
+    <button type="button" id="check2">확인</button>
+
+    <script>
+        var result = document.getElementById("check2");
+        result.onclick = function() {
+
+            
+
+            var a = document.getElementById("id").value;
+            var b = document.getElementById("remember").checked;
+
+            alert("사용자가 입력한값:" + a + ", id기억하기여부:" + b)
+        }
+
+    </script>
+    
+    <hr>
+     
+    <h2 id="title">단어를 선택하세요</h2>
+
+	
+
+    <h3>힌트: select는 change이벤트 일껄?</h3>
+    <select id="selector">
+        <option>선택</option>
+        <option>hello</option>
+        <option>안녕하세요</option>
+        <option>尼河吳</option>
+    </select>
+
+    <script>
+        var title = document.getElementById("title");
+        var selector = document.getElementById("selector");
+
+        selector.onchange = function() {
+            
+            if(selector.value == "hello") {
+                title.innerHTML = "영어입니다";
+            } else if(selector.value == "안녕하세요") {
+                title.innerHTML = "한국어 입니다";
+            } else if(selector.value == "尼河吳") {
+                title.innerHTML = "중국어 입니다"; 
+            } else {
+                title.innerHTML = "단어를 선택하세요";
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>
