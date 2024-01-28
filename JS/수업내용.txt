@@ -1,3 +1,44 @@
+------------------------------------------------------------------------
+1월22일
+1.span은 inline이다. 활용하기
+2.선택자 .box .list .li:nth-child(n)  -> 해당 클래스의 n번째 선택 확인하기
+  ex).box .list .li:nth-child(1), .box .list .li:nth-child(4){margin:0}
+	1,4번째만 margin 0으로 설정한다
+3.box-sizing = border-box; 찾아보기
+ ->width or height 를 입력하고 차지하는 공간을 계산할때, padding, margin, border의
+	px 값을 합산한 값을 차지하도록 만든다. 즉 padding margin border 의 값들을 합산하여 
+	width 값이 되도록한다. 
+4.height를 최대한 자제할것
+ ->컨텐츠의 크기에 따라 자동으로 정해지는 값을 사용한다
+5.<ul>, <li> 태그 다시 한번 보기
+ ->둘다 블럭 요소라고 생각하고, ul은 선수가 없는 목록들을 포함하는 큰 박스로 생각하고 그 안에서 수직으로 쌓인
+	목록이 li 라고 생각하자
+6.미디어쿼리
+7.부트스트랩 3버전 사용하기(3,4,5버전 만들어진 기반이 다르다) + 참고내용은 w3schools 페이지에서 참고하기
+grid system // modal(알림창)// dropdown
+8.grid system -> container row col-sm-3 이라면 기본값 12칸 중에 각각 3칸을 합쳐서 총 4칸짜리로 만들어진다
+9.커스터마이징 중요 - 영역 분할부터
+10.웹폰트 적용 확인하기
+ ->구글폰트에서 찾고, import를 이용해서 가져오고 
+	@import url 을 적고,
+	html, body{font-family: 'Sunflower', sans-serif; width: 100%; min-width: 320px;}
+	를 부여한다
+========================================================================================
+1월23일
+1.w3schools에서 dropdown 활용해보기/navbar search 활용하기/carousel 활용
+	linear-gradient(to right(left...) 컬러) :자연스러운 색깔 변화
+2.grid 와 modal 제일 중요
+3..prod-list >li[class*=col-] 선택자를 지정할 때. 의미: list 클래스 밑에 있는 li태그중 col-이 들어간 모든것
+4.index05(실습) 받아서 다시하기
+5.https://parkinwook.github.io/TEST2.github.io/ 다시 확인하기
+==============================================================
+1월25일
+자바스크립트
+1.프로토타입 == 함수 기반이다
+2.스크립트 언어 정의 찾아보기
+3.ES5 와 ES6는 2015년 기준으로 크게 달라졌다
+4.자바스크립트 공식 문서 MDN 으로 함수 의미 찾기(Reference -> JS)
+5.console.log 단축키 설정하기
 1월25일
 자바스크립트
 1.프로토타입 == 함수 기반이다
