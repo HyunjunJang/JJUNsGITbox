@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="number" value="0" >
+    <button onclick="calc(this)">+</button>
+    <button onclick="calc(this)">-</button>
+
+    <script>
+        var num = document.querySelector("input");
+        //var num = document.querySelector("input").value 위와 이것은 완전히 다르다;
+        console.log(num);
+        function calc(btn){
+            console.log(btn); //자기자신 태그를 지칭한다
+            if(btn.innerHTML === "+"){
+                num.value++;
+            }else{
+                if(num.value<=0){
+                    alert("0보다 작은 수는 안됩니다");
+                    return;
+                }else{
+                num.value--;
+                }
+            }
+        }
+    </script>
+
+
+<pre>
+    1. 예약버튼 클릭시 좌석이 최소한개이상 체크되어있지 않다면 경고창을 띄우는 코드를 작성하세요.
+    2. 체크된 값은 예약확인란에 출력해주세요.
+    3. 힌트 - 버튼클릭시 배열에 값을 저장하고, 화면에는 문자열로 만들어 출력 합니다.😊
+</pre>
+    좌석 수 입력 : <input type="number" value="1" id="seatnum"> <button>입력</button><br>
+    좌석:   <input type="checkbox" value="1" onclick="reser(this)" class="seat">1
+
+    <br><button id="clc" onclick="clcc()">예약</button>
+    <br>예약번호:
+    <br><p id="res_num"></p>
+
+    <script>
+        var seatnum = document.getElementById("seatnum");
+        for(var i=0; i<seatnum.value; i++){
+            
+        }
+
+    </script>
+</body>
+</html>

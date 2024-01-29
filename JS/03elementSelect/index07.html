@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- <p>아이디 <input type="text" id="idd" style="border: 2px solid red;"></p>
+    <p class="hidden" style="display: block;">아이디 4글자 이상이거든요?</p>
+
+    <script>
+        var idd = document.getElementById("idd");
+        var hide = document.querySelector(".hidden");
+        var arr = [];
+        idd.onkeyup = function(){
+            arr.push(idd.value);
+            console.log(idd.value);
+            console.log(arr.length);
+            if(arr.length>=4){
+                hide.style = "display:none;";
+                idd.style = "border: 2px solid green;"
+            }else{
+                hide.style = "display:block;";
+                idd.style = "border: 2px solid red;"
+
+            }
+        } 
+    </script> -->
+
+    <p>아이디 <input type="text" id="idd" style="border: 2px solid red; outline-width: 0;" ></p>
+    <p class="hidden" style="display: block;">아이디 4글자 이상이거든요?</p>
+
+    <script>
+        var idd = document.getElementById("idd");
+        var hide = document.querySelector(".hidden");
+        idd.onkeyup = function(){
+            
+            if(idd.value.length>=4){
+                hide.style = "display:none;";
+                idd.style = "border: 2px solid green; outline:none;"
+            }else{
+                hide.style = "display:block;";
+                idd.style = "border: 2px solid red; outline:none;"
+
+            
+        }
+        }
+        
+    </script>
+</body>
+</html>

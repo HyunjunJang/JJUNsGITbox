@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input:focus {
+            outline: none;
+        }
+    </style>
+
+</head>
+<body>
+    
+<pre>
+아이디나 비밀번호가 변경 될때 마다 다음을 구현하세요
+힌트: 이벤트 onchange, onkeyup, 
+</pre>
+    
+    <form>
+        <input type="text" name="id">
+        <div id="msg"></div>
+    </form>
+
+    <script>
+        var input = document.querySelector("input[name=id]")
+        var msg = document.getElementById("msg");
+
+        input.onkeyup = function() {
+            
+            //작성한 값의 길이
+            if(input.value.length > 4) { //초록
+                input.style.border = "1px solid green";
+                msg.innerHTML = "";
+            } else { //빨강
+                input.style.border = "1px solid red";
+                msg.innerHTML = "아이디는 4글자 이상이라구!";
+            }
+
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>

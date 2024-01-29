@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">클릭</button>
+
+    <ul class="list">
+        <li>홍길동</li>
+        <li>이순신</li>
+        <li>홍길자</li>
+    </ul>
+
+    <button id="btn2">클릭2</button>
+    <ul class="list2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <script>
+        //querySelector
+        var li = document.querySelector(".list li"); //반드시 문자열로 입력
+        var btn = document.querySelector("#btn"); //아이디가 btn인 태그. getElementById 아닌 다른 방법
+        btn.onclick = function(){
+            li.style.backgroundColor = "red";
+        }
+        ////////////////////////////////////////
+        var lis = document.querySelectorAll(".list2 li");
+        console.log(lis); //배열이다
+
+        var btn2 = document.querySelector("#btn2")
+        btn2.onclick=function(){
+            for(var i=0; i<lis.length; i++){
+                lis[i].style.backgroundColor = "red";
+            }
+
+        }
+    </script>
+</body>
+</html>

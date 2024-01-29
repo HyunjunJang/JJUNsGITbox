@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>태그의 속성변경과 CSS변경</h3>
+
+    <img src="img/1.jpg" width="500px" class="img" style="border: 5px solid black;">
+
+    <select name="계절" class="sel">
+        <option value="1">봄</option>
+        <option value="2">여름</option>
+        <option value="3">가을</option>
+        <option value="4">겨울</option>
+    </select>
+
+    <!-- <button type="button" id="btn">사진바꾸기</button> -->
+    
+    <input type="color" class="color">
+    <!-- <button type="button" id="colorBtn">색상바꾸기</button> -->
+
+    <script>
+        // var btn = document.getElementById("btn");
+        var img = document.querySelector(".img"); //.조심 (클래스)
+        var sel = document.querySelector(".sel"); //select의 경우 value 가져오기 다시 확인하기(sel.value만 하면된다)
+        var col = document.querySelector(".color");
+        console.log(col.value);
+
+        col.onclick = function(){
+            img.style = "border: 5px solid " + col;
+        }
+        sel.onchange = function(){
+            img.src = "img/" + sel.value + ".jpg"; //태그 속성 변경
+        }
+
+        
+    </script>
+    
+</body>
+</html>

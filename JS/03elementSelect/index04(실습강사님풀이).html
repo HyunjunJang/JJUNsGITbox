@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>자바스크립트 카운트(인라인 이벤트와 this innerHTML value 속성을 이용해서 카운트처리하세요)</h2>
+    <input type="number" value="0" id="result">
+    <button onclick="calculator(this)">+</button>
+	<button onclick="calculator(this)">-</button>
+
+    
+    <script>
+        var result = document.getElementById("result");
+
+        function calculator(btn) {
+
+            if(btn.innerHTML === "+") {
+                result.value++;
+            } else { //-인 경우
+               
+                if(result.value <= 0) {
+                    alert("0보다 작을 수 없습니다");
+                    return; //함수종료
+                }
+
+                result.value--;
+            }
+
+        }
+    </script>
+
+
+    <hr>
+<pre>
+1. 예약버튼 클릭시 좌석이 최소한개이상 체크되어있지 않다면 경고창을 띄우는 코드를 작성하세요.
+2. 체크된 값은 예약확인란에 출력해주세요.
+3. 힌트 - 버튼클릭시 배열에 값을 저장하고, 화면에는 문자열로 만들어 출력 합니다.😊
+</pre>
+
+    <form>
+        좌석:
+        <input type="checkbox" name="seat" value="1">1
+        <input type="checkbox" name="seat" value="2">2
+        <input type="checkbox" name="seat" value="3">3
+        <input type="checkbox" name="seat" value="4">4
+        <input type="checkbox" name="seat" value="5">5
+        <input type="checkbox" name="seat" value="6">6
+        <input type="checkbox" name="seat" value="7">7
+        <input type="checkbox" name="seat" value="8">8
+        <input type="checkbox" name="seat" value="9">9
+        <input type="checkbox" name="seat" value="10">10
+
+
+        <br>
+        <button type="button" id="btn">예약</button>
+        
+        <br>
+        예약번호:<div id="msg"></div>
+        
+        
+    </form>
+
+    <script>
+        var seat = document.getElementsByName("seat"); //name이 seat인 태그들 (배열)
+        var btn = document.getElementById("btn");
+        var msg = document.getElementById("msg");
+
+
+        btn.addEventListener('click', function() {
+
+            var bool = false; //체크를 한지 안한지 확인하는 변수
+            var arr = []; //좌석을 저장할 빈배열 
+
+            for(var i = 0; i < seat.length; i++) {
+                if(seat[i].checked ) { //check를 하면 true 값 반환
+                    bool = true;
+                    arr.push( seat[i].value ); //좌석의 값을 배열에 저장함
+                }
+            }
+
+            //console.log(bool, arr);
+            if(bool === false) { //좌석체크가 안된경우
+                alert("좌석은 최소 1개이상 선택하세요")
+                msg.innerHTML = "";
+            } else {
+                msg.innerHTML = arr.join("번, ") + "번";
+            }
+
+
+
+        })
+
+    </script>
+
+
+
+
+
+</body>
+</html>

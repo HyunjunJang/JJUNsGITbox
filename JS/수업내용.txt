@@ -55,3 +55,8 @@ grid system // modal(알림창)// dropdown
 10.전역변수, 지역변수를 정하는 것은 {} 가 아니라 함수 선언까지이다.
 11.var x = {key:value} 는 오브젝트를 뜻한다. 
 ---------------------------------------------------------------
+1월29일
+1.index04(실습문제) 다시풀기
+2.innerHTML 은 태그 사이의 값을 변경한다
+3.input type "checkbox" 와 태그.checked를 통한 체크 여부 확인
+4.var sel = document.querySelector(".sel"); //select의 경우 value 가져오기 다시 확인하기(sel.value만 하면된다)
