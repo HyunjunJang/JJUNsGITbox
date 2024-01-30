@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1>할일 목록 만들기</h1>
+    </div>
+
+    <div id="namebar">
+        <input type="text" id="name" placeholder="이름을 입력하세요">
+        <button type="button" id="btn1">확인</button>
+    </div>
+    <div>
+        <input type="text" id="todo" placeholder="할일을 입력하세요">
+        <button type="button" id="btn2">확인</button>
+        <ul id="list">
+        </ul>
+    </div>
+
+    <script>
+        var namebar = document.getElementById("namebar");
+        var btn1 = document.getElementById("btn1");
+
+        btn1.onclick = function () {
+            var name = document.getElementById("name").value;
+            console.log(name);
+
+            var h2 = document.createElement("h2");
+            h2.innerHTML = name + "님 안녕하세요";
+            namebar.previousElementSibling.appendChild(h2);
+
+            namebar.style.display = "none";
+        }
+
+        var btn2 = document.getElementById("btn2");
+        var list = document.getElementById("list");
+        btn2.onclick = function () {
+            var todo = document.getElementById("todo");
+            var li = document.createElement("li");
+            li.innerHTML = todo.value + "<button type='button' onclick='btnsremove(this)'>X</button>";
+            list.appendChild(li);
+            todo.value = "";
+        }
+
+
+        function btnsremove(ems) {
+            ems.parentElement.remove();
+        }
+    </script>
+</body>
+
+</html>

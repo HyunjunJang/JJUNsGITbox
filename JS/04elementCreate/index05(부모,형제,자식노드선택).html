@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="list">
+        <li>1.홍길동</li>
+        <li>2.이순신</li>
+        <li class="target">3.홍길자</li>
+        <li>4.홍순자</li>
+    </ul>
+
+    <script>
+        var list = document.querySelector(".list");
+
+        console.log(list.children); //모든 자식 태그 선택(*배열이다!)
+        console.log(list.children[0]); //이렇게 호출하면 태그!!
+        console.log('--------------');
+
+        console.log(list.firstElementChild); //엘리먼트형태의 첫번째 자식만 선택
+        // console.log(list.firstChild); //태그 사이의 공백도 선택하므로 white space가 선택된다(안쓴다~~)
+        console.log(list.lastElementChild);
+        console.log('--------------');
+
+        console.log(list.children[1]); //태그이다
+        console.log(list.children[1].nextElementSibling); //다음 형제 엘리먼트
+        console.log(list.children[1].previousElementSibling); //이전 형제 엘리먼트
+        console.log('--------------');
+        
+        var target = document.querySelector(".target"); //홍길자 li 태그
+        
+        console.log(target);
+        console.log(target.parentElement);
+        console.log(target.parentElement.parentElement);
+        console.log(target.parentElement.parentElement.parentElement);
+
+    </script>
+</body>
+</html>

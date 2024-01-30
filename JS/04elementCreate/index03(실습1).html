@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            border-spacing: 0;
+            border-collapse: collpase;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn1">1개 추가하기</button> <!-- type="button" -->
+    <button id="btn2">5개 추가하기</button>
+    <table id="tab">
+        <!-- <tbody> <thead> 를 넣어서 하면 전체 테이블을 table id 로 잡지 않아도된다 -->
+        <tr>
+            <th>교시</th>
+            <th>훈련과목</th>
+            <th>담당자</th>
+            <th>훈련내용</th>
+        </tr>
+        <tr>
+            <td><input type="text" size="2"></td> <!-- input 태그 사이즈 조절 -->
+            <td><input type="text" ></td>
+            <td><input type="text" size="3"></td>
+            <td><input type="text" ></td>
+        </tr>
+
+    </table>
+
+    <script>
+        var tab = document.getElementById("tab");
+        btn1.onclick = function () {
+            answerfun();
+        }
+
+
+        btn2.onclick = function () {
+            for (var j = 1; j <= 5; j++) {
+                answerfun();
+            }
+        }
+
+        //강사님 풀이에서 반복된 함수 만들어서 처리
+
+        function answerfun(){
+            var tr = document.createElement("tr");
+
+            var td = document.createElement("td");
+            td.innerHTML = "<input type='text' size='2'>"
+            tr.appendChild(td);
+            var td = document.createElement("td");
+            td.innerHTML = "<input type='text' >"
+            tr.appendChild(td);
+            var td = document.createElement("td");
+            td.innerHTML = "<input type='text' size='3'>"
+            tr.appendChild(td);
+            var td = document.createElement("td");
+            td.innerHTML = "<input type='text' >"
+            tr.appendChild(td);
+            tab.appendChild(tr);
+        }
+    </script>
+</body>
+
+</html>
