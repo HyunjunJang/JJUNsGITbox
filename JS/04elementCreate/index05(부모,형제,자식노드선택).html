@@ -14,16 +14,17 @@
     </ul>
 
     <script>
-        var list = document.querySelector(".list");
-
-        console.log(list.children); //모든 자식 태그 선택(*배열이다!)
+        var list = document.querySelector(".list"); //태그다
+        console.log(list);
+        console.log('------------');
+        console.log(list.children); //모든 자식 태그 선택(*태그들의 배열이다!)
         console.log(list.children[0]); //이렇게 호출하면 태그!!
         console.log('--------------');
 
         console.log(list.firstElementChild); //엘리먼트형태의 첫번째 자식만 선택
         // console.log(list.firstChild); //태그 사이의 공백도 선택하므로 white space가 선택된다(안쓴다~~)
         console.log(list.lastElementChild);
-        console.log('--------------');
+        console.log('--------------------------');
 
         console.log(list.children[1]); //태그이다
         console.log(list.children[1].nextElementSibling); //다음 형제 엘리먼트

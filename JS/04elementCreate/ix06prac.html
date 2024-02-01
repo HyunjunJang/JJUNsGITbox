@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>할일 목록 만들기</h2>
+    </div>
+    <div>
+        <input type="text" id="name" placeholder="이름을 입력하세요"> <button type="button" id="btn1">확인</button>
+    </div>
+    <div>
+        <input type="text" id="todo" placeholder="할일을 입력하세요"> <button type="button" id="btn2">확인</button>
+    </div>
+    <div>
+        <button type="button" id="btn3">전체삭제</button>
+    </div>
+    <ul class="list">
+
+    </ul>
+
+    <script>
+        var btn1 = document.getElementById("btn1");
+        
+        btn1.onclick = function(){
+            var name = document.getElementById("name");
+            var val = name.value;
+            console.log(val);
+            name.value = "";
+            name.style.display = 'none';
+            btn1.style.display = 'none';
+            name.parentElement.innerHTML="<h2>"+val+"님 안녕하세요 </h2>";
+        }
+
+        var btn2 = document.getElementById("btn2");
+        var list = document.querySelector(".list");
+        btn2.onclick=function(){
+            var todo = document.getElementById("todo");
+            var val = todo.value;
+            todo.value = "";
+            var li = document.createElement("li");
+            var btn = document.createElement("button");
+            btn.innerHTML="X";
+            btn.onclick=function(){
+                this.parentElement.remove();
+            }
+            console.log(btn);
+            li.innerHTML=val;
+            li.appendChild(btn);
+            console.log(li);
+            list.appendChild(li);
+            console.log(list);
+        }
+
+        var btn3 = document.getElementById("btn3");
+        btn3.onclick=function(){
+            console.log(list.children);
+            if(confirm("정말로 삭제하십니까")){
+                var num = list.children.length
+                for(var i=0; i<num; i++){
+                    list.children[0].remove();
+                }
+            }else{
+                return;
+            }
+        }
+    </script>
+</body>
+
+</html>

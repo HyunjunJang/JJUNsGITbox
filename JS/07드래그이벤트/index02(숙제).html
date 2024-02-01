@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul, li {list-style: none; padding: 0; margin: 0;}
+        .menu_wrap {display: flex; flex-direction: column; justify-content: center; align-items: center; float: left;}
+        .list {display: flex; width: 630px; flex-flow: row wrap; justify-content: space-around;}
+        .list li {border: 1px solid #777; width: 150px; height: 200px; margin-top: 5px;}
+        .menu_rsv {border: 1px solid #777; width: 200px; height: 405px; float: left; margin-left: 20px; margin-top: 5px;}
+        .total {overflow: hidden;}
+        .menu_rsv li { border-bottom: 1px solid #777;}
+    </style>
+</head>
+<body>
+    <div class="total">
+        <h1>메뉴들</h1>
+        <div class="menu_wrap">
+
+            <ul class="list">
+                <li class="box" draggable="true">메뉴1</li>
+                <li class="box" draggable="true">메뉴2</li>
+                <li class="box" draggable="true">메뉴3</li>
+                <li class="box" draggable="true">메뉴4</li>
+                <li class="box" draggable="true">메뉴5</li>
+                <li class="box" draggable="true">메뉴6</li>
+                <li class="box" draggable="true">메뉴7</li>
+                <li class="box" draggable="true">메뉴8</li>
+            </ul>
+        </div>
+
+        <div class="menu_rsv">
+            <h4 style="margin:5px">메뉴 목록</h4>
+            <hr style="margin: 0px;">
+            <ul class="rsv_list">
+
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script>
+        var list = document.querySelector(".menu_wrap > .list");
+        var menu_rsv = document.querySelector(".menu_rsv");
+        var rsv_food = "";
+        list.addEventListener("dragstart",function(){
+            rsv_food = event.target.cloneNode(true);
+            rsv_food.style.padding = "5px";
+        })
+
+        menu_rsv.addEventListener("dragover",function(){
+            event.preventDefault();
+        })
+        menu_rsv.addEventListener("drop", function(){
+            event.preventDefault();
+            console.log(event.target);
+            if(event.target.children[2].tagName != "UL") return;
+            event.target.children[2].append(rsv_food);
+            
+        })
+    </script>
+</body>
+</html>

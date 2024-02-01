@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>이벤트 속성을 이용해서 다음을 만들어 보세요. <br />1.다중이벤트방식 <br />2.다 만들었다면 위임방식으로 변경하세요<h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>내용</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody class="list">
+                    <tr>
+                        <td>1</td>
+                        <td>첫글</td>
+                        <td>hi</td>
+                        <td><button type="button">삭제</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>첫글</td>
+                        <td>hi</td>
+                        <td><button type="button">삭제</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>첫글</td>
+                        <td>hi</td>
+                        <td><button type="button">삭제</button></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>첫글</td>
+                        <td>hi</td>
+                        <td><button type="button">삭제</button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <script>
+                
+                var list = document.querySelector(".list");
+                list.onclick = function(e){
+                    if(e.target.tagName != "BUTTON") return;
+                    e.target.parentElement.parentElement.remove();
+                }
+            </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        img { width: 150px;}
+        #mainpic img { width: 500px;}
+    </style>
+</head>
+<body>
+    <h1>다중이벤트 처리</h1>
+    <ul class="box">
+        <img src="img/1.jpg" alt="">
+        <img src="img/2.jpg" alt="">
+        <img src="img/3.jpg" alt="">
+        <img src="img/4.jpg" alt="">
+    </ul>
+    
+    <h4>결과: <button type="button" id="del">사진삭제</button></h4>
+    <div id="mainpic">
+
+    </div>
+    
+    
+    <script>
+        var box = document.querySelector(".box");
+        var mainpic = document.getElementById("mainpic");
+        box.onclick=function(e){
+            if(mainpic.firstChild){
+                mainpic.firstChild.remove();
+            }
+            var clone = e.target.cloneNode(false);
+            mainpic.appendChild(clone);
+            console.log(mainpic);
+        }
+        var del = document.getElementById("del");
+        del.onclick = function(){
+            if(mainpic.firstChild){
+                mainpic.firstChild.remove();
+            }
+        }
+    </script>
+</body>
+</html>

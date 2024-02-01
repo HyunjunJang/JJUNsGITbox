@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="todo" placeholder="할일 적어봐">
+    <button type="button" class="btn1">추가하기</button>
+    <ul class="list">
+
+    </ul>
+
+    <script>
+        var btn1 = document.querySelector(".btn1");
+        var text = document.querySelector(".todo");
+        var list = document.querySelector(".list");
+        var cnt = 1;
+
+        function plus(){
+            // console.log(text.value.length);
+            if (text.value.length != 0) {
+                var li = document.createElement("li")
+                li.innerHTML = cnt + ". " + text.value;
+                list.appendChild(li);
+                text.value = "";
+                
+            } else{
+                return;
+            }
+        }
+        btn1.onclick = function (){
+            plus();
+            cnt++;
+        } ;
+
+        
+    </script>
+</body>
+
+</html>

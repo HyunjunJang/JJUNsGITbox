@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #777;
+        }
+        .list{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #777;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <span>복제할상자(복제하려면 더블클릭하세요)</span>
+    </div>
+
+    <div class="list" >
+
+    </div>
+
+    <script>
+        var box  = document.querySelector(".box");
+        var list = document.querySelector(".list");
+        box.ondblclick = function(){
+            //태그.cloneNode(boolean)
+            var clone = box.cloneNode(false); //true를 적으면 자식까지 복제한다. false이면 자식은 복제 하지 않는다
+            console.log(clone);
+
+            list.appendChild(clone)
+        }
+    </script>
+</body>
+</html>

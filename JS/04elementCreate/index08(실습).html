@@ -30,7 +30,6 @@
 
         btn1.onclick = function () {
             var name = document.getElementById("name").value;
-            console.log(name);
 
             var h2 = document.createElement("h2");
             h2.innerHTML = name + "님 안녕하세요";
@@ -41,10 +40,42 @@
 
         var btn2 = document.getElementById("btn2");
         var list = document.getElementById("list");
+
+        function up(aaa){
+            var par = document.getElementById("list");;
+            var current = aaa.parentElement;
+            var prev = current.previousElementSibling;
+
+            if(prev===null){
+                alert("위에 없잖아 안돼 돌아가")
+                return;
+            }
+            if(confirm("올립니까?")){
+            par.insertBefore(current, prev);
+            } else{return}
+        }
+        function down(bbb){
+            var par = document.getElementById("list");;
+            var current = bbb.parentElement;
+            var next = current.nextElementSibling;
+
+            if(next==null){
+                alert("안돼 돌아가")
+                return;
+            }
+            if(confirm("내립니까?")){
+                par.insertBefore(next, current);
+            } else{return}
+            
+        }
+
         btn2.onclick = function () {
             var todo = document.getElementById("todo");
             var li = document.createElement("li");
-            li.innerHTML = todo.value + "<button type='button' onclick='btnsremove(this)'>X</button>";
+            var btn = document.createElement("button");
+            li.innerHTML = todo.value + "<button type='button' onclick='btnsremove(this)'>X</button><button type='button' onclick='up(this)'>위로</button><button type='button' onclick='down(this)'>아래로</button>";
+            
+            console.log(btn);
             list.appendChild(li);
             todo.value = "";
         }
@@ -54,10 +85,10 @@
         var removeAll = document.getElementById("removeAll");
         removeAll.onclick = function () {
 
-            if (confirm("정말로 삭제하시겠습니까?")) {
-                var arr = removeAll.nextElementSibling.children;
-                for (var i = arr.length - 1; i >= 0; i--) {
-                    arr[i].remove();
+            if(confirm("정말로 삭제하십니까")){
+                var num = list.children.length
+                for(var i=0; i<num; i++){
+                    list.children[0].remove();
                 }
             } else {
                 return;

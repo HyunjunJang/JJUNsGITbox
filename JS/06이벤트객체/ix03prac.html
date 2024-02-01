@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .list img {
+            width: 200px;
+        }
+        .main {
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>다중처리 이벤트</h1>
+    <div class="list">
+        <img src="img/1.jpg" alt="">
+        <img src="img/2.jpg" alt="">
+        <img src="img/3.jpg" alt="">
+        <img src="img/4.jpg" alt="">
+    </div>
+    결과:
+    <div>
+        <img class="main" src="img/1.jpg" alt="">
+    </div>
+
+    <script>
+        var list = document.querySelector(".list");
+        var main = document.querySelector(".main");
+        list.onclick = function(e){
+            if(e.target.tagName == "IMG"){
+                console.dir(e.target);
+                console.log(e.target.src);
+                main.src = e.target.src;
+
+            } else{
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -9,7 +9,7 @@
     
     <input type="text" class="todo" placeholder="할일 적어봐">
     <button type="button" id="btn">추가하기</button>
-
+    
     <ul class="list">
         
     </ul>
@@ -22,16 +22,19 @@
 
         btn.onclick = function(){
             index++;
+            console.log(todo.value);
             var todo_value = index + ". " + todo.value; //사용자가 input에 입력한 값
             
             var li = document.createElement("li"); //li태그 생성
             var a  = document.createElement("a");  //a태그 생성
             a.href = "https://www.google.com"; //a태그의 속성인 href에 접근해서 설정함
+            a.style.color = "red";
             // (태그).(속성)
+            console.log(a);
 
-            //.appendChild(자식으로 넣을 태그)
+            //(태그).appendChild(자식으로 넣을 태그)
             // a.appendChild(todo_value) 은 에러가 나온다. ()안에는 Node라고하는 element 타입으로 들어가야하는데 문자열을 넣어서 그렇다
-            var text = document.createTextNode(todo_value); //따라서, 문자열을 Node타입으로 변경해야한다
+            var text = document.createTextNode(todo_value); //따라서, 문자열을 Node타입의 Text로 변경해야한다
             a.appendChild(text); //a태그 안에 text를 넣는다
             li.appendChild(a); //li태그 안에 a태그를 넣는다
             list.appendChild(li); //list 안에 li태그를 넣는다
@@ -47,21 +50,23 @@
     <hr>
     <hr>
 
+    <button type="button" id="btn2">10개 생성하기</button>
     <ul class="example">
         <!-- 여기에 10개 한번에 만들기 -->
     </ul>
-    <button type="button" id="btn2">10개 생성하기</button>
 
     <script>
         var btn2 = document.getElementById("btn2");
         var example = document.querySelector(".example");
+        console.log(example);
         btn2.onclick = function(){
             var value = todo.value; //사용자 input 입력값
-            
+            console.log(value);
+            for(var i =1; i<=10; i++){
             var li = document.createElement("li");
             li.innerHTML = "<a href='https://www.google.com'>" + value + "</a>"; //li태그 안에 a태그를 만드는 위와 다른 방법
-            for(var i =1; i<=10; i++){
-            exmple.appendChild(li); //example 클래스 태그 안에 li 태그 넣기 //li도 객체이므로 단순히 appendChild가 10번 돈다고해서 10개 생성되지 않는다. 따라서 li를 10개 생성해야한다
+                console.log(li);
+                example.appendChild(li); //example 클래스 태그 안에 li 태그 넣기 //li도 객체이므로 단순히 appendChild가 10번 돈다고해서 10개 생성되지 않는다. 따라서 li를 10개 생성해야한다
             }
         }
         

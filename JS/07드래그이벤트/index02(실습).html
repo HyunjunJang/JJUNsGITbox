@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        ul, li {list-style: none; padding:0; margin:0;}
+        .wrap {display: flex; flex-direction: column; justify-content: center; align-items: center;}
+        .list {display: flex; width: 900px; flex-flow: row wrap; justify-content: space-around;}
+        .list li{border: 1px solid #777; width: 180px; height: 280px; padding: 10px; margin-top: 20px;}
+    </style>
+</head>
+<body>
+    
+    <div class="wrap">
+        <h3>움직여봐</h3>
+
+        <ul class="list">
+            <li class="box"><img src="monalisa.png" draggable="true" alt=""></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+            <li class="box"></li>
+        </ul>
+    </div>
+    
+    <script>
+        var list = document.querySelector(".list");
+        var img = document.querySelector("img");
+        // var box = document.querySelector(".box");
+
+        list.addEventListener("dragover", function(){
+            event.preventDefault();
+        })
+        list.addEventListener("drop",function(){
+            event.preventDefault();
+            if(event.target.tagName != "LI") return;
+            event.target.appendChild(img);
+            
+        })
+    </script>
+</body>
+</html>

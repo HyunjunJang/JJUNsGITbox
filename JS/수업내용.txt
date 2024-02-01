@@ -62,3 +62,24 @@ grid system // modal(알림창)// dropdown
 3.input 태그에 size="" 으로 크기조절
 4.함수 잘 만들기. 반복된다면 함수 떠올리기.
 5.JS에서 노드가 뭔지 찾아보기
+6. list.removeChild(list.firstElementChild); (+ 반복문으로 전체 지우기도 생각해보기)
+=======================================================================================
+1월31일
+1.index09에서 옮길 행에대한 부모를 꼭 먼저 불러야한다. (var table = document.querySelector(".table");)
+2.appendChild 와 함께 생각하기
+3.index08에서 btn 버튼 만들고 add
+4.이벤트객체 빡세게 보기
+5.console.dir(태그) 활용하기
+<CSS>
+@ float:left 쓰기 위해서 부모영역에 overflow:hidden
+@ 부모에 class 걸 때와 본인에게 직접걸 때 구분하기
+@ 글자 두껍게 하기 ~~> font-weight: bolder;
+@ 스크롤바 나오게 하기 ~~> overflow: auto;
+@ 박스 안에 글자를 가운데 정렬하기 ~~> style="text-align:center"
+@ 박스 자체를 가운데로 가져온다 ~~> margin: 0 auto;
+==================================================================================================================
+2월1일
+1.index09(토글탭) 확인하기
+2.drag이벤트에서 대상박스인지 타겟인지 정확하게 구분하기
+3.event.preventDefault(); 드래그해서 놓으면 자동으로 실행되는 디폴트값을 막아줘야함
+4.중요한 이벤트는 dragover 와 drop

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" class="btn">토글활용하기</button>
+    <p style="background-color:trns;" class="on">박스</p>
+
+    <script>
+        var btn = document.querySelector(".btn");
+        var on = document.querySelector(".on");
+        btn.addEventListener('click', function(){
+            console.log(on.classList);
+            if(on.classList.contains("on")){
+                on.style.backgroundColor = "yellow";
+            }else{
+                on.style.backgroundColor = "transparent";
+            }
+            on.classList.toggle("on");
+        })
+    </script>
+</body>
+</html>
