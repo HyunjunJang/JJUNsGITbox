@@ -32,35 +32,35 @@
         var func2 = document.querySelector(".func2");
         var func3 = document.querySelector(".func3");
 
-        // func1.onclick = function() {
-        //     alert("func1번 부모");
-        // }
-        // func2.onclick = function() {
-        //     event.stopPropagation(); //더이상 이벤트 전파를 막는다(버블링 중단)
-        //     alert("func2번 중간");
-        // }
-        // func3.onclick = function() {
-        //     alert("func3번 자식");
-        // }
+        func1.onclick = function() {
+            alert("func1번 부모");
+        }
+        func2.onclick = function() {
+            // event.stopPropagation(); //더이상 이벤트 전파를 막는다(버블링 중단)
+            alert("func2번 중간");
+        }
+        func3.onclick = function() {
+            alert("func3번 자식");
+        }
 
         
         //이벤트 캡쳐링 -> 부모, 자식에 이벤트가 걸려있을 때, 부모->자식으로 이벤트가 전파되는 특성
         //실제 만들어보면 쫌 이상하다는 것을 알거야
         //캡쳐링은 이벤트 리스너 로만 만들수 있음.
-        func1.addEventListener("click", function() {
-            event.stopPropagation(); //캡쳐링
-            alert("func1번 부모");
-        }, true); //캡쳐링
+        // func1.addEventListener("click", function() {
+        //     event.stopPropagation(); //캡쳐링
+        //     alert("func1번 부모");
+        // }, true); //캡쳐링
 
-        func2.addEventListener("click", function() {
+        // func2.addEventListener("click", function() {
             
-            alert("func2번 중간");
-        }, true); //캡쳐링
+        //     alert("func2번 중간");
+        // }, true); //캡쳐링
 
-        func3.addEventListener("click", function() {
+        // func3.addEventListener("click", function() {
 
-            alert("func3번 자식");
-        }, true); //캡쳐링
+        //     alert("func3번 자식");
+        // }, true); //캡쳐링
 
         //보통 캡쳐링을 구현할 일은 거의 없습니다. 그냥 버블링을 쓰면 됩니다.
 

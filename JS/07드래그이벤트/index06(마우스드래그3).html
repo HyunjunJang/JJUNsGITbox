@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        section {
+            height: 1000px;
+        }
+
+        .canvas {
+            border: 1px solid #000;
+            width: 500px;
+            height: 500px;
+        }
+
+        .box {
+            background-color: red;
+            width: 50px;
+            height: 50px;
+        }
+
+        /* 박스를 옴기기 위한 중요한 디자인 */
+        .canvas {
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>마우스이벤트를 활용한 박스 옴기기</h3>
+    <section>
+        <div class="canvas">
+            <div class="box"><br>box</div>
+        </div>
+    </section>
+
+    <script>
+        var canvas = document.querySelector(".canvas");
+        var box = document.querySelector(".box");
+        var drag = false;
+        var dev = {x:0, y:0}; //박스의 클릭한 고정 위치
+        var canvasDev = {x:canvas.offsetLeft, y:canvas.offsetTop}; //canvas 위치값을 보정할 변수 console.dir(div) 로 확인한다
+
+
+        
+        
+        canvas.onmousemove = function () {
+            // if (event.target.className != "canvas") return; (버블링)
+            //마우스를 움직일 때 깜빡이는 현상이 발생 -> 버블링을 허용해야한다
+            //상자의 이동을 이벤트기반의 좌표가 아니라 문서의 절대좌표기준으로 움직이면 된다.
+            if (drag != true) return;
+            //절대 좌표 기준으로 상자위치보정
+            box.style.left = event.pageX - dev.x - canvasDev.x + "px";
+            box.style.top = event.pageY - dev.y - canvasDev.y + "px";
+        }
+        
+        canvas.onmousedown = function () {
+            if(event.target.className != "box") return;
+            drag=true; //움직일 수 있다는 의미
+            
+            //마우스가 꼭지점을 따라다니게 되는데 사용자가 누른 좌표를 고정한다
+            dev.x = event.offsetX;
+            dev.y = event.offsetY;
+            console.log(event.offsetX);
+            console.log(event.offsetY);
+        }
+
+        canvas.onmouseup = function(){
+            drag = false;
+        }
+    </script>
+
+
+</body>
+
+</html>
