@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="popup.js"></script> <!-- 쿠키를 이용해 하루간 팝업 안뜨게하기 -->
+</head>
+
+<body>
+
+    <script>
+        //쿠키가 없을 때 팝업을 띄운다    
+        if (!findCookie("mainPopup")) {
+            window.open("popup.html", "제목~", "width=300, height=300, left=200, top=200");
+        }
+    </script>
+</body>
+
+</html>

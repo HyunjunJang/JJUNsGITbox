@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>쿠키는 서버와 클라이언트의 지속적인 정보유지 수단이다(로그인 정보를 유지하는 등)
+        key=value 의 헝태로 생겼다
+    </h3>
+
+    <input type="text" name="cookieName">
+    <input type="text" name="cookieValue">
+    <button type="button" id="btn">쿠키생성</button>
+
+    <hr>
+
+    <input type="text" name="findCookie">
+    <button type="button" id="btn2">쿠키찾기</button>;
+
+
+    <script>
+        //js쿠키 사용법
+        //document.cookie = "age=20; expires=날짜";
+
+        //쿠키 생성
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+            createCookie();
+        }
+
+        function createCookie() {
+            //쿠키로 만든 name을 얻는다
+            var name = document.querySelector("input[name=cookieName]").value; //태그의 값을 가져와야하므로
+            var value = document.querySelector("input[name=cookieValue]").value;
+
+            //쿠키 만료 시간 설정
+            var date = new Date(); //현재 날짜
+            var millis = date.getTime() + 3600000; //현재시간을 밀리초로 받는다(+1시간)
+            var time = new Date(millis);
+            console.log(time);
+            console.log("UTC 시간: " + time.toUTCString());
+
+            //쿠키 생성. (expires 설정 문제시에는 세션으로 뜬다)
+            document.cookie = name + "=" + value + "; expires=" + time.toUTCString();
+        }
+
+        //쿠키찾기
+        var btn2 = document.getElementById("btn2");
+        btn2.onclick = function () {
+            findCookie()
+        }
+
+        function findCookie() {
+            var coo = document.cookie; //쿠키를 얻음 key=value; key2=value2; ,,, 의 형태로 얻는다
+            console.log(coo);
+            var arr = coo.split("; "); //쿠키를 ";"로 스플릿 하여 배열로 얻는다
+            console.log(arr);
+
+            var find = document.querySelector("input[name=findCookie]").value; //.value 안빼먹게 조심하자
+            //찾고자 하는 쿠키를 find 변수에 담는다
+
+            for (var i = 0; i < arr.length; i++) {
+                console.log(arr[i]); //하나씩 출력을 위해 for문을 돌린다
+                if (arr[i].indexOf(find + "=") != -1) { //이름으로 쿠키를 찾음(indexOf)
+                    console.log(arr[i].replace(find + "=", "")); //key= 을 공백으로 변경(replace)한다
+                    return;
+                }
+            }
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

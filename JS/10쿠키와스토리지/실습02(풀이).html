@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>미리 만들어 놓고 display제어 or 직접생성하기</h3>
+
+    <div class="result">
+
+    </div>
+
+
+    <script>
+        (function() {
+
+            var result = document.querySelector(".result");
+            var item = localStorage.getItem("item"); //로컬스토리지 
+
+            if(item != null) { //있음
+                
+                var arr = JSON.parse( item );
+                for(var i = 0; i < arr.length; i++ ) {
+                    
+                    var img = document.createElement("img");
+                    img.src = arr[i];
+                    img.width = 200;
+                    result.appendChild(img);
+                }
+
+            } else { //없음
+                result.innerHTML = "최신정보가 없습니다"
+            }
+
+
+        })();
+    </script>
+
+
+
+</body>
+</html>

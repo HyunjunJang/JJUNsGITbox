@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 200px;
+            cursor: pointer;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>최신관심목록</h3>
+    <div class="wrap"> <!-- 부모에 이벤트를 걸어서 각 이미지 태그에 위임하고 wrap.onclick = function(e){} 를 통해 event 객체를 생성하고 활용한다 -->
+        <img src="img/1.jpg" id="spring">
+        <img src="img/2.jpg" id="summer">
+        <img src="img/3.jpg" id="fall">
+        <img src="img/4.jpg" id="winter">
+    </div>
+    <a href="실습02.html"><button type="button" id="btn">최신정보확인하기</button></a>
+
+    <script>
+        var spring = document.getElementById("spring"); //부모에 이벤트 거는걸 생각해봐야했다
+        var summer = document.getElementById("summer");
+        var fall = document.getElementById("fall");
+        var winter = document.getElementById("winter");
+        var imges = document.querySelector("div > img");
+        var clickArr = [];
+
+        localStorage.clear();
+        imges.onclick = function () {
+            window.alert("클릭완료:클릭하셨습니다")
+
+        };
+        spring.onclick = function () {
+            localStorage.setItem("spring", "<img src=\"img/1.jpg\" id=\"spring\">")
+            if (!clickArr.includes(localStorage.getItem("spring"))) {
+                clickArr.push(localStorage.getItem("spring"));
+                localStorage.setItem("clickARR", JSON.stringify(clickArr));
+            } else {
+                return;
+            }
+        };
+        summer.onclick = function () {
+            localStorage.setItem("summer", "<img src=\"img/2.jpg\" id=\"summer\">")
+            if (!clickArr.includes(localStorage.getItem("summer"))) {
+                clickArr.push(localStorage.getItem("summer"));
+                localStorage.setItem("clickARR", JSON.stringify(clickArr));
+            } else {
+                return;
+            }
+        };
+        fall.onclick = function () {
+            localStorage.setItem("fall", "<img src=\"img/3.jpg\" id=\"fall\">")
+            if (!clickArr.includes(localStorage.getItem("fall"))) {
+                clickArr.push(localStorage.getItem("fall"));
+                localStorage.setItem("clickARR", JSON.stringify(clickArr));
+            } else {
+                return;
+            }
+        };
+        winter.onclick = function () {
+            localStorage.setItem("winter", "<img src=\"img/4.jpg\" id=\"winter\">")
+            if (!clickArr.includes(localStorage.getItem("winter"))) {
+                clickArr.push(localStorage.getItem("winter"));
+                localStorage.setItem("clickARR", JSON.stringify(clickArr));
+            } else {
+                return;
+            }
+
+        };
+
+
+
+
+    </script>
+</body>
+
+</html>

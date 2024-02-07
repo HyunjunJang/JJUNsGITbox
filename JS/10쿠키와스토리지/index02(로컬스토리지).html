@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {color: blue;}
+    </style>
+</head>
+<body>
+    <h3>스토리지는 브라우저 내에 (키=값)으로 저장하는 저장소</h3>
+    <h3>localStorage는 브라우저를 종료하더라도 값이 유지가 된다(지우기전까지 영구적으로)</h3>
+    <h3>sessionStorage는 브라우저를 종료하면 값이 사라진다</h3>
+    <h3>사용방법은 동일하다(localStorage -> sessionStorage 로 변경하면됨)</h3>
+
+    <button type="button" id="btn">스토리지생성하기</button>
+
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+            console.log(localStorage);
+
+            //생성
+            localStorage.setItem("aaa","홍길동");
+            localStorage.setItem("bbb","이순신");
+            localStorage.setItem("ccc",["a", "b", "c"]); //Storage는 문자열밖에 저장되지 않아서 배열을 저장해도 문자열로 저장된다
+            localStorage.setItem("ddd",JSON.stringify(["a", "b", "c"])); //따라서 JSON.stringify 를 이용해서 객체를 문자열로 만든다
+
+            //사용
+            console.log(localStorage.getItem("aaa"));
+            console.log(localStorage.getItem("bbb"));
+            console.log(localStorage.getItem("ccc"));
+            console.log(localStorage.getItem("ddd"));
+            console.log(JSON.parse((localStorage.getItem("ddd")))); //JSON parse 를 활용한다
+            
+            // //삭제
+            // localStorage.removeItem("aaa") //key 
+            // //전체삭제
+            // localStorage.clear();
+        };
+    </script>
+
+</body>
+</html>

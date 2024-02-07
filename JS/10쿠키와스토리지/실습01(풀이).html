@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>localStorage를 이용하여 마지막에 클릭한 2개의 정보를 불러오기</h3>
+
+    <div class="wrap">
+        <img src="img/1.jpg" width="200" alt="이미지">
+        <img src="img/2.jpg" width="200" alt="이미지">
+        <img src="img/3.jpg" width="200" alt="이미지">
+        <img src="img/4.jpg" width="200" alt="이미지">
+
+    </div>
+
+    <button type="button" onclick="location.href='index03_result.html'; ">최신정보 확인하기</button>
+
+
+    <script>
+        //이벤트 위임
+        var wrap = document.querySelector(".wrap");
+        wrap.onclick = function(e) {
+            //img가 아니면 종료
+            if( e.target.tagName != "IMG" ) return;
+            
+            setStorage(e.target);
+        }
+
+        function setStorage(img) {
+            
+            var x = img.src; //src값
+
+            //빈 배열 생성
+            var arr = []
+
+            if(localStorage.getItem("item") != null ) {
+                arr = JSON.parse( localStorage.getItem("item") );
+            }
+            //길이가 2 이상이면 앞에서 이미지를 제거
+            if(arr.length >= 2 ) {
+                arr.shift();
+            }
+
+            //사용자가 클릭한 이미지 src를 저장
+            arr.push(x)
+            //로컬스토리지 배열을 저장
+            localStorage.setItem("item" , JSON.stringify(arr) );
+
+        }
+
+
+    </script>
+
+
+</body>
+</html>

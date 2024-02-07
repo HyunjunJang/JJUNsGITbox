@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button type="button" id="btn1">인터벌1 중지</button>
+    <button type="button" id="btn2">인터벌2 중지</button>
+
+
+
+    <script>
+        var a = 10; //전역변수는 윈도우 객체에 저장됨
+
+        //alert("경고창"); //window는 생략도 가능함
+        //window.alert("경고창");
+
+
+        //1st
+        // function handler() {
+        //     console.log(1);
+        // }
+        // window.setInterval(handler, 1000);
+
+        var count = 0;
+
+        //인터벌 함수는 자신의 고유한 아이디를 반환합니다.
+        //js
+
+        var id1 = window.setInterval(function() {
+            console.log(++count);
+        }, 1000);
+
+        var id2 = window.setInterval( function() {
+            console.log('hello world');
+        }, 5000 );
+
+
+        //버튼1 이벤트
+        document.getElementById("btn1").addEventListener('click', function() {
+            window.clearInterval(id1); //인터벌1 중지
+        })
+        
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
