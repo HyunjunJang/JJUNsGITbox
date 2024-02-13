@@ -1,18 +1,43 @@
-git 관련
+	깃 활용하는 법
+1.github 회원 가입을 하고 new repository 누르고 project 이름을 쓰고 만든다
+2.git을 설치한다. (git과 github는 전혀 다르다)
+3.git bash를 실행하고 첫번째는 git config --global user.name "NAME" 을 입력한다
+4.두번째는 git config --global user.email "깃허브가입 이메일" 을 입력한다
+5.잘입력됐는지 정보 확인하는법은 git config --list 를 입력하고 user name과 email을 확인해본다
+6.git bash 에서 맨처음 올리때는 git init 을 입력한다. (:이 나오면 밑에 다 못나오고 짤렸다는 뜻 q를 눌러 빠져나온다)
+	--> 이때 해당 폴더에 .git 폴더가 숨긴 폴더로 생긴다
+7.git add 해당파일 위치 --> 해당 파일을 깃허브에 올리겠다(첫번째 단계)
+	-->add . 은 해당 폴더의 모든 파일을 올리겠다
+8.git status는 add 목록에 대한 내용이 나타난다
+9.git commit -m "입력메세지 ex)first commit"
+	-->commit은 히스토리를 만든다고 생각한다. 예를들면 과제완성(1) 에서 좀 더 보니 수정내용이 생기면서
+	과제완성(2) 그 후 과제완성(3) 이런 식으로 갈 때, commit 을 한번 두번 하면서 변경사항을 수정하면서
+	최종 버전을 만들어간다.
+10.add 와 commit 을 통한 변경사항을 git 에서 github로 보낸다
+	-->연결고리를 만든다. git remote add origin + 해당 레파지토리 주소입력해서 연결고리를 만든다
+11.git remote -v 로 연결여부를 확인할 수 있다
+12.즉 내 컴퓨터의 로컬 프로젝트와 주소를 입력한 github의 레파지토리와 연결 됐다는거다
+13.git push origin master를 입력해서 master 브랜치로 보낸다
+14.만약에 내 코드를 좀 바꾼다면? git add . 하면 된다. (이제는 git init 할 필요가 없다)
+15.github 사이트에서 commit을 누르면 무엇이 수정되었는지도 볼 수 있다
+16.github push 를 위해서는 로컬에서의 파일 위치를 잘확인해야한다. 상위 폴더로 가는 방법은 cd .. 을 입력한다
+17.수정이 조금이라도 일어나면 add 와 commit 을 다시해야한다
+18.터미널에서 : 이 뜨면 다 못나오고 밑에 짤렸다는 뜻. 방향키 아래를 누르거나 q를 눌러 빠져나온다
+19.git clone url --> 원격저장소의 default branch를 로컬 저장소의 새로운 파일에 복사한다
+20.git clone -b branchName url -->원격저장소의 특정 branch를 로컬저장소의 새로운파일에 복사한다
 
-git init
+
+git config --global user.name "name"
+git config --global user.email "email"
+git config --list
+git init 으로 폴더 설정( .git 폴더가 생긴다)
 git add .
 git status
-git commit -m "meg"
-git log
-git push
+git commit -m "message"
+git remote add origin + github주소
 git remote -v
 git push origin master
 
-git clone 은 github 원격저장소에 있는 파일들을 가져와 새로운 폴더에 저장한다
-git clone -b branchname 주소 을 통해 특정 브랜치를 가져온다
-예를 들어 git clone -b master url 을하면 해당 url 원격저장소의 master 브랜치를
-로컬 저장소의 새로운 폴더에 저장한다
 
 ------------------------------------------------------------------------
 ------------------------------------------------------------------------
