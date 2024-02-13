@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    <script src="index10.js"></script> 기존에 하던 방식
+     -->
+     <script type="module">
+        //가져오기 1
+        import {name, age, getInfo, sum, add} from './index10.js'; //가져오고자하는 변수이름으로 가져온다
+        console.log(name);
+        console.log(age);
+        getInfo();
+        add(10);
+        console.log(sum);
+
+        //가져오기 2 다가져오기
+        import * as test from './index10.js';
+
+        console.log(test.name);
+
+        //가져오기 3 변수 이름을 바꿔서 가져오기
+     </script>
+</body>
+</html>
