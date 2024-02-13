@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //forin 문장부터
+        console.log('========for in-----------');
+        let arr = ['a','b','c','d'];
+        for(let i in arr){
+            console.log(i); //인덱스 나온다!
+        }
+
+        console.log('--------for of---------------------');
+        //for of
+        for(let i of arr){
+            console.log(i); //값
+        }
+
+        const arr2 = [
+            {id:"aaa123", age:20},
+            {id:'bbb123', age:30}
+        ];
+        for(let i of arr2){ //i가 객체다
+            console.log(i);
+        }
+        for(let {id, age} of arr2){  //따라서 {}로 구조분해할당 가능하다
+            console.log(id, age);
+        }
+        for(let {id} of arr2){  //따라서 {}로 구조분해할당 가능하다
+            console.log(id);
+        }
+    </script>
+</body>
+</html>

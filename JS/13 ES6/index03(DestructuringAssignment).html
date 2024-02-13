@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const arr = [1, 2, 3, 4];
+        let a1 = arr[0];
+        console.log(a1);
+
+        console.log('----------구조분해할당----------');
+        //구조재할당 -> 반대로 쓴다. 와우 지린다!!
+        let [b1, b2, b3, b4] = arr;
+        console.log(b1);
+        let [c1, , c2, ,] = arr;
+        let [c3, ...c4] = arr;
+        // let [c3, ...c4, c5] = arr;  중간에 배열로 받는건 안된다
+        console.log(c1, c2);
+        console.log(c3, c4);
+        let [...d1] = arr;
+        console.log(d1);
+        console.log("-------객체에서구조재할당--------------------------------");
+        let person = {
+            "name": "김철수",
+            "age": 30,
+            "job": ["programmer", "designer"],
+            "info": {id:"aaa123", email:"naver"}
+        };
+        console.log(person.age, person["age"]); //객체값에 접근하는 방법
+        let {name, age, job}= person; //객체구조재할당
+        console.log(name, age, job);
+        
+        //다른이름으로 가져오기
+        let{name:aaa} = person; //name키를 aaa변수로 가져온다
+        console.log(aaa);
+        
+        //객체에서 구조재할당
+        let {info :{id, email} } = person; //여기에 대한 이해가 필요
+        console.log(id, email);
+        let{info :{id:x, email:y}} = person; //info안에 있는 id를 x이름으로, email을 y이름으로
+        console.log(x,y);
+        console.log("-------------------------------------------------------");
+
+        let list = [
+            {
+                "num" : 1,
+                "title" : "hello",
+                "info": ["banana", "apple"], 
+                "profile" : {"birth": "20201111", "img": "https://wwww.test.com/1"}
+            },
+            {
+                "num" : 1,
+                "title" : "hello",
+                "info": ["melon", "orange"], 
+                "profile" : {"birth": "20201212", "img": "https://wwww.test.com/2"}
+            }
+        ]
+        //list안에 2번째 요소에서 profile 안에 있는 img를 구조분해할당하기!
+        let { profile : {img : imgg}} = list[1];
+        console.log(imgg);
+        let [ , { profile : {img : imgg2}}] = list;
+        console.log(imgg2);
+
+    </script>
+</body>
+
+</html>

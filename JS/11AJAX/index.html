@@ -54,22 +54,21 @@
         // })
         // console.log(3);
 
-        // //4th
-        // fetch('example.txt').then(function (response) {
-        //     if(response.status == 200){
-        //         console.log(response); //data는 body에 담겨있다
-        //         response.text().then(function(data){
-
-        //         }) //.text() 결과가 promise 객체이므로 then절(콜백함수) 사용가능
+        // // //4th
+        // fetch('example.txt').then(function (response) { //response객체 안에는 여러 주요 속성들이 있다
+        //     if(response.status == 200){ //성공했다는 의미
+        //         console.log(response); //response 객체 body에 data가 담겨있다
+        //         //결과가 무엇이냐에 따라
         //         //.text() 는 문자열로 형변환
         //         //.json() 은 오브젝트로 형변환
         //         //.formdata() 는 폼객체형태로 변환
-
+        //         response.text().then(function(data){ //.text() 결과가 promise 객체이므로 then절(콜백함수) 사용가능
+        //         }) 
         //     }
         // });
 
-        // //5th - 콜백에서 return을 걸면 결과가 Promise를 반환하므로
-        // // 계속 then절을 다시 사용할 수 있고, 그 결과를 반환할 수 있다
+        // //5th - 콜백에서 return을 걸면서 .text() 이므로 결과가 Promise 형태이다
+        // //그래서 계속 then절을 다시 사용할 수 있고, 그 결과를 반환할 수 있다
         // var x = fetch('example.txt').then(function (response) {
         //     return response.text();
         // })
@@ -83,15 +82,15 @@
         // .then(function (data) {
         //     console.log(data);
         // })
+        
         // //text 에서는 내가 추출하고자하는 데이터를 뽑는데에 힘들다
-
-        //6nd - 따라서 서로 약속된 json or xml 형식을 사용한다
-        fetch('example.json').then(function (response) {
-            return response.json(); //json.parse 를 대신한다
-        })
-        .then(function (data) {
-            console.log(data); //그 값을 확인
-        })
+        // //6nd - 따라서 서로 약속된 json or xml 형식을 사용한다
+        // fetch('example.json').then(function (response) {
+        //     return response.json(); //json.parse 를 대신한다
+        // })
+        // .then(function (data) {
+        //     console.log(data); //그 값을 확인
+        // })
 
     </script>
 </body>

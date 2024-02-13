@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //xml을 변환하여 사용하는 방법
+        fetch("example.xml")
+        .then(function (response) {
+            return response.text(); //1.일단 text로 받는다
+        })
+        .then(function (data) {
+            console.log(data);
+            //다시 xml로 파싱한다
+            var parser = new DOMParser(); //DOMParser 객체 생성
+            var result = parser.parseFromString(data, "text/xml"); //(파싱할 데이터, 타입)
+            console.log(result); //document
+            //DOM에 접근하는 방식으로 사용
+            var datas = result.querySelectorAll("data"); //data 태그에 관한 모든 정보를 얻는다
+            console.log(datas);
+            for(var i=0; i<datas.length; i++){
+                var name = datas[i].querySelector("name");
+                var version = datas[i].querySelector("version");
+                var price = datas[i].querySelector("price");
+
+                console.log(name.innerHTML); //태그안에 적힌 값을 가져와야하므로
+                console.log(version.innerHTML);
+                console.log(price.innerHTML);
+            }
+        })
+    </script>
+</body>
+</html>

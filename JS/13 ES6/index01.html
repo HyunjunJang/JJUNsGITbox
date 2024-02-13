@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>let과 const변수</h3>
+
+    <ul class="box">
+        <li>목록</li>
+        <li>목록</li>
+        <li>목록</li>
+        <li>목록</li>
+    </ul>
+
+
+    <script>
+        //let변수는 중복선언 X, 스코프(범위)는 중괄호
+        
+        let a = 1;
+        // let a = "1";  중복선언 오류
+        
+        if (true) {
+            let a = 100;
+            let b = 10;
+            console.log(a);
+        }
+        console.log(a); 
+        // console.log(b); // let변수의 스코프는 중괄호이므로 정의되지 않음
+        console.log("------------------------------------");
+
+        //li에 이벤트 걸기 var와 let 차이
+        var lis = document.querySelectorAll(".box li");
+        for(var i = 0; i < lis.length; i++){
+            lis[i].addEventListener("click",function(){
+            console.log("이벤트가 걸렸는지 확인", i);
+            });
+        }
+        for(let i = 0; i < lis.length; i++){
+            lis[i].addEventListener("click",function(){
+            console.log("이벤트가 걸렸는지 확인", i);
+            });
+        }
+
+        console.log("------------------------------------------");
+
+        const GENDER = "남자"; //상수이므로 변경 불가능
+        // GENDER = "여자"; //에러
+
+        const arr = ["홍길동", "이순신"]; //배열 자체 변경(주소변경의 느낌) 불가능
+        arr[0] = "홍길자"; //배열 요소를 바꾸는것은 가능
+        arr.push("둘리");
+        arr.unshift("또치");
+        console.log(arr);
+
+        const PERSON = {age : 20}; //PERSON = {name : "홍길동"} 으로 객체 자체 변경 불가능
+        PERSON.age = 30; //요소 변경도 가능
+        PERSON.name = "홍길동"; //요소 추가는 가능
+        console.log(PERSON);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //익명함수
+        // a(); 당겨쓰기가 안된다
+        let a = function () {
+            console.log(1);
+        };
+        a();
+
+        //애로우함수 (당겨쓰기 불가능)
+        let b = () => {
+            console.log(66);
+        }
+        b();
+
+        //문법 1 - 구문이 1개이면 {}가 생략이 됩니다. 그리고 자동으로 return 됩니다
+        let q = (a,b) => console.log(a*b);
+        q(1,2);
+
+        let c = (a) => a + 10; //자동리턴된다.
+        console.log(c(5));
+
+        //문법 2 - 매개변수가 1개라면, () 생략이 됩니다.
+        let d = a => a + 10;
+        console.log(d(7));
+
+        //문법 3 - 객체를 리턴하고싶으면, ()로 묶어준다. ()로 안묶으면 {}는 함수를 표현하므로 이상해진다
+        let e = () => {
+            return {key:50}
+        }
+        let e2 = () => ({key:50})  //위와 같은 문장이다
+        console.log(e); //e 와 e() 다르다 주의!!!!!!!!
+        console.log(e());
+        console.log(e2());
+
+        let f = a => ({key:a});
+
+        console.log('----------------------------------------------------');
+
+        setInterval(function (){}, 2000)
+        setInterval(() => {}, 2000)
+
+        fetch("~~~").then(function(response){})
+        fetch("~~~~").then( (response)=>{})
+
+
+    </script>
+</body>
+</html>
