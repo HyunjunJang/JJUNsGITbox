@@ -6,8 +6,6 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  //React.StrickMode 는 개발단계에서 컴포넌트보다 더 먼저 실행 되어서, 버그를 찾는데 사용함
-  //그래서 사용시에 2번씩 실행된다. 따라서 주석처리해도 된다
   // <React.StrictMode>
     <App />
   // </React.StrictMode>
