@@ -16,6 +16,7 @@
 
         console.log('----------구조분해할당----------');
         //구조재할당 -> 반대로 쓴다. 와우 지린다!!
+        //let [] = 배열 , let {key} = 객체
         let [b1, b2, b3, b4] = arr;
         console.log(b1);
         let [c1, , c2, ,] = arr;
@@ -37,7 +38,7 @@
         console.log(name, age, job);
         
         //다른이름으로 가져오기
-        let{name:aaa} = person; //name키를 aaa변수로 가져온다
+        let{name : aaa} = person; //name키의 값을 aaa변수로 가져온다
         console.log(aaa);
         
         //객체에서 구조재할당
