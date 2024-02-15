@@ -8,15 +8,11 @@
 </head>
 
 <body>
+    <button type="button" onclick="call(this)" >this란?</button>
     <script>
-        function printMessage() {
-            console.log("Hello, World!");
+    function call(btn) {
+            btn.innerHTML = "짠!!" //innerHTML 태그사이의 값
         }
-
-        // 1000밀리초(1초) 간격으로 printMessage 함수를 호출
-        const intervalId = setInterval(printMessage, 1000);
-        console.log(intervalId);
-        
     </script>
 </body>
 
