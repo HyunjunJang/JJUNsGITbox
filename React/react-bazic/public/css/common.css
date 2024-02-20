@@ -1,0 +1,8 @@
+/* index.html에서 link를 걸어서 */
+
+.public_style{
+    border: 1px solid red;
+    border-radius: 5px;
+    color: blue;
+    background-color: aqua;
+}
